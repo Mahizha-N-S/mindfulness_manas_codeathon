@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content="HTML Template, site template, seo, marketing, creative, corporate, modern, multipurpose, one page, business, responsive, minimal, saas, startup">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <title>Quiz Game</title>
+    <!-- Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Alatsi', sans-serif;
+            text-align: center;
+            color: black;
+            background-image:url("images/pic33.jpg");
+            /* background-image: linear-gradient(315deg, #f8f9d2 0%, #e8dbfc 74%); */
+        }
+        .container {
+            margin: 50px auto;
+            margin-bottom: 0px;
+        }
+        .play-button {
+            font-size: 18px;
+        }
+        .play-button:hover {
+            background-color: grey;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        .container{
+          width:70%;
+        }
+        .card{
+        width: 300px;
+        height: 225px;
+        background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(234,249,249,0.67) 0.1%, rgba(239,249,251,0.63) 90.1% );
+        position: relative;
+        border-radius: 20px;
+        cursor: pointer;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.123);
+        }
+        .card img{
+        position: absolute;
+        width: 100%;
+        border-radius: 10px;
+        }
+        .content{
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        height: 50px;
+        padding: 0.4em 1.5em;
+        font-size: 14px;
+        background: rgba(255, 255, 255, 0);
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        transform: scale(0.9);
+        color: white;
+        /* border: 0.25px outset #cb997e; */
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.144);
+        overflow: hidden;
+        transition: all .4s;
+        }
+        .content p{
+        font-size: 0.8em;
+        }
+        .card:hover .content{
+        height: 180px;
+        }
+        @media (max-width: 768px) {
+          .card:hover .content{
+          height: 250px;
+          }
+          .crd-two{
+            width:100%;
+          }
+          .container{
+            width: 100%;
+          }
+        }
+        @media (max-width: 1496px) {
+          .img-one{
+            margin-left:35%;
+          }
+        }
+        .navbar-toggler-icon{
+          background-color: white;
+        }
+        .navbar {
+           position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          padding: 10px 20px;
+          height: 70px;
+        }
+
+        .navbar .home-icon {
+          color: #fff;
+          font-size: 24px;
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+        }
+
+        .navbar .home-icon i {
+            margin-right: 10px;
+        }
+        </style>
+</head>
+<body>
+  <section id="nav-bar">
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-image: linear-gradient(90.4deg, rgba(188,120,236,1) -2.2%, rgba(29,133,163,1) 83.5%);">
+      <div class="navbar">
+          <a class="home-icon" href="index1.html"><i class="fas fa-home"></i>Home</a>
+          <!-- <h2 style="margin-left:50px;color:white;font-family:'Alatsi', sans-serif;font-style:bold;">Mindfulness</h2> -->
+      </div>
+  </nav>
+  </section>
+  <br><br><br>
+    <div class="container" style="height:400px;">
+      <div class="card col-sm mt-0" style="height:400px;width:90%;margin-right:5%;margin-left:5%;">
+          <img src="images/pic15.png" style="margin-left:15%;height:45vh;width:40vw;margin-bottom:0px;">
+            <div class="content" style="margin-top:0px;">
+              <h1 class="display-5" style="color:black;">Welcome to Quick Test!</h1>
+              <h3 class="lead" style="color:black;">Test your mindfulness level with our quiz.</h3>
+              <a href="mm_quiz.html" style="text-decoration:none;">
+              <button class="btn btn-lg play-button" style="font-size: 25px;color: white;background-image: linear-gradient( 90.4deg,  rgba(188,120,236,1) -2.2%, rgba(29,133,163,1) 83.5% );">Let's Start</button><br>
+              </a>
+          </div>
+        </div>
+    </div>
+    <div class="row col-sm" style="margin-top:3%;">
+      <div class="card crd-two col-sm mt-5" style="margin-right:5%;margin-left:5%;height:250px;">
+          <img src="images/pic1.png" style="height:200px;width:200px;margin-left:30%;margin-right:30%;">
+          <div class="content">
+            <h2 style="color:black;">What is Mindfulness Measure?</h2>
+            <h6 class="display-6" style="color:black;">A mindfulness measure is an assessment tool, often using self-report questionnaires like the Mindful Attention Awareness Scale (MAAS).  Humans vary in attention and awareness to present events and experiences. The inherent capability differs in individuals due to levels of discipline, self-regulation, and personality.</p>
+        </div><br><br>
+      </div>
+      <div class="card crd-two col-sm mt-5" style="margin-right:5%;margin-left:5%;height:250px;">
+        <img src="images/pic16.png" style="height:200px;width:200px;margin-left:30%;margin-right:30%;">
+        <div class="content">
+          <h2 style="color:black;">How to Measure Mindfulness?</h2>
+          <h6 class="display-6" style="color:black;">To determine your mindfulness level, you respond to questions honestly, reflecting on your present-moment awareness and experiences. Your score provides insight into your mindfulness, reflecting your level of awareness and presence in daily life. This can help you gauge your progress in developing mindfulness and identify areas for improvement in your practice.</p>
+      </div>
+    </div><br><br>
+      <!-- <div class="jumbotron col-sm ml-2 mt-0" style="margin-right:8%;">col-sm sm ksdj;nwh3,KDFWI HOVIB KEJVSLN LXCJVSPBE F;W ;B [OWJFWGTW]</div> -->
+    </div>
+
+
+
+</body>
+</html>

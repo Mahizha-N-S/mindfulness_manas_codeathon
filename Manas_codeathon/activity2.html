@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full-Screen Video</title>
+    <style>
+        /* Style to make the video element cover the entire screen */
+        body, html, #video-container {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div id="video-container">
+        <video id="fullscreen-video" controls>
+            <source src="images/exercise1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button id="play-button">Play</button>
+    </div>
+
+    <script>
+        const video = document.getElementById('fullscreen-video');
+        const playButton = document.getElementById('play-button');
+
+        playButton.addEventListener('click', function () {
+            if (video.paused) {
+                video.play();
+                playButton.textContent = 'Pause';
+            } else {
+                video.pause();
+                playButton.textContent = 'Play';
+            }
+        });
+
+        // Handle full-screen functionality
+        video.addEventListener('click', toggleFullScreen);
+
+        function toggleFullScreen() {
+            if (!document.fullscreenElement) {
+                video.requestFullscreen().catch(err => {
+                    alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+                });
+            } else {
+                document.exitFullscreen();
+            }
+        }
+    </script>
+</body>
+</html>

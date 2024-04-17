@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content="HTML Template, site template, seo, marketing, creative, corporate, modern, multipurpose, one page, business, responsive, minimal, saas, startup">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Exercise 2 : Leaves on a Stream</title>
+    <style>
+    body {
+      font-family: 'Alatsi', sans-serif;
+      margin: 0;
+      /* background-color: #f8f9d2; */
+      /* background-image: linear-gradient(315deg, #f8f9d2 0%, #e8dbfc 74%); */
+      background-image:url("images/pic33.jpg");
+      }
+
+      .navbar-toggler-icon{
+        background-color: white;
+      }
+
+      .collapsible {
+        cursor: pointer;
+        padding: 10px;
+        background-color: #F4D1D7;
+        /* background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(234,249,249,0.67) 0.1%, rgba(239,249,251,0.63) 90.1% ); */
+        border: none;
+        border-radius: 15px;
+        text-align: left;
+        outline: none;
+        width: 100%;
+        transition: background-color 0.5s;
+      }
+
+      .content {
+        /* background: linear-gradient(to bottom right, #ffefed, white 200%); */
+        background-color: #f9fcff;
+        background-image: linear-gradient(147deg, #f9fcff 0%, #dee4ea 74%);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-out;
+      }
+
+      .content p {
+        margin: 10px;
+      }
+
+      .collapsible.active {
+        /* background-color: #f4acb7; */
+        color: white;
+        font-size: 20px;
+        transition: smooth;
+        background-image:linear-gradient( 90.4deg,  rgba(188,120,236,1) -2.2%, rgba(29,133,163,1) 83.5% );
+      }
+      .card{
+        border-radius: 50px;
+        transform-style: preserve-3d;
+        background-color: #f0efeb;
+        box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+      }
+      .button-play {
+        appearance: none;
+        background-color: #000000;
+        border: 2px solid #1A1A1A;
+        border-radius: 15px;
+        box-sizing: border-box;
+        color: #FFFFFF;
+        cursor: pointer;
+        display: inline-block;
+        font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+        font-size: 16px;
+        font-weight: 600;
+        line-height: normal;
+        margin: 0;
+        min-height: 60px;
+        min-width: 0;
+        outline: none;
+        padding: 16px 24px;
+        text-align: center;
+        text-decoration: none;
+        transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        width: 100%;
+        will-change: transform;
+      }
+
+      .button-play:disabled {
+        pointer-events: none;
+      }
+
+      .button-play:hover {
+        box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+        transform: translateY(-2px);
+      }
+
+      .button-play:active {
+        box-shadow: none;
+        transform: translateY(0);
+      }
+      .navbar {
+         position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 10px 20px;
+        height: 70px;
+      }
+
+      .navbar .home-icon {
+        color: #fff;
+        font-size: 24px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+      }
+
+      .navbar .home-icon i {
+          margin-right: 10px;
+      }
+      video#backgroundvid {
+      position: fixed; right: 0; bottom: 0;
+      min-width: 100%; min-height: 100%;
+      width: auto; height: auto; z-index: -100;
+      background: url(polina.jpg) no-repeat;
+      background-size: cover;
+      }
+
+    </style>
+  </head>
+  <body>
+    <section id="nav-bar">
+      <nav class="navbar navbar-expand-lg fixed-top" style="background-image: linear-gradient(90.4deg, rgba(188,120,236,1) -2.2%, rgba(29,133,163,1) 83.5%);">
+        <div class="navbar">
+            <a class="home-icon" href="index1.html"><i class="fas fa-home"></i>Home</a>
+            <!-- <h2 style="margin-left:50px;color:white;font-family:'Alatsi', sans-serif;font-style:bold;">Mindfulness</h2> -->
+        </div>
+    </nav>
+    </section>
+    <section id="intro" class="mx-auto" style="margin-top:5%;">
+      <div class="card mx-auto" style="width: 24rem;height:32rem;">
+        <img class="card-img-top" src="images/pic19.jpg" style="border-radius:25px;margin-left:auto;margin-right:auto;height:250px;width:250px;margin-top:50px;margin-bottom:auto;" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Leaves on a Stream</h5>
+          <p class="card-text">Listen to the Leaves on a Stream Exercise.</p>
+          <a href="activity4.html" target="_parent" class="text-center">
+            <button class="button-play" style="font-size: 20px;"role="button">Play Now</button>
+          </a>
+        </div>
+      </div>
+      <br><br>
+      <hr>
+      <h1 class="text-center mt-5 mb-5"> Leaves on a Stream Exercise</h1><br><br>
+      <div class="header mx-auto col-sm-3 col-md-6 col-lg-4">
+        <button class="collapsible" style="font-size: 18px;height:75px">1. Get into position</button>
+        <div class="content" style="background-color:grey;">
+          <p style="padding-top:5%;padding-bottom:5%;">Sitting in a comfortable position, allow your shoulders to drop and relax, and plant your feet firmly on the ground. Or, if you are sitting cross-legged, feel the sense of contact between your feet and the seat and the floor beneath you.Now gently close your eyes, and for the next few breaths bring your full focus of attention to your breathing.
+          Notice the feeling of the air flowing in through the nostrils, down into the lungs, and down into the belly as you inhale and on the exhale, feel the release of any tension as you let the air out slowly.</p>
+          <img src="images/pic20.png" alt="mindfulness-meditate" style="height:50%;width:50%;margin-left:20%;margin-right:20%;">
+        </div>
+      </div><br>
+      <div class="header mx-auto col-sm-3 col-md-6 col-lg-4">
+        <button class="collapsible" style="font-size: 18px;height:75px">2. Imagine a stream.</button>
+        <div class="content" style="background-color:grey;">
+          <p style="padding-top:5%;padding-bottom:5%;">Now, imagine that you are sitting by the side of a gently flowing stream. This might be a stream that you know, or it might be something you create in your mind using your imagination. There might be a light breeze blowing as you sit here, dappled light glistening on the water, and soft green grass beneath you. imagine the stream however you like – it’s your imagination</p>
+          <img src="images/pic21.png" alt="mindfulness-meditate" style="height:50%;width:50%;margin-left:20%;margin-right:20%;">
+        </div>
+      </div><br>
+      <div class="header mx-auto col-sm-3 col-md-6 col-lg-4">
+        <button class="collapsible" style="font-size: 18px;height:75px">3. Let your leaves on the stream</button>
+        <div class="content" style="background-color:grey;">
+          <p style="padding-top:5%;padding-bottom:5%;">Now imagine that there are leaves floating on the surface of the stream, and these leaves are gently flowing past you, down the stream. For the next few minutes, see if you can take every thought that pops into your head and place it on a leaf. Now your thoughts may show up in your mind in the form of words, or pictures, or something else. However a thought arises, simply place it on a leaf, and let it float by. Do this regardless of whether the thoughts are positive and enjoyable, or negative and challenging. Simply place each on a leaf, and let it float down the stream. If your mind says something along the lines of “I can’t do it” or “This is stupid”, place those thoughts on leaves, and let them float by.</p>
+          <img src="images/pic22.png" alt="mindfulness-meditate" style="height:50%;width:50%;margin-left:20%;margin-right:20%;">
+        </div>
+      </div><br>
+      <div class="header mx-auto col-sm-3 col-md-6 col-lg-4">
+        <button class="collapsible" style="font-size: 18px;height:75px">4. Continue the exercise</button>
+        <div class="content" style="background-color:grey;">
+          <p style="padding-top:5%;padding-bottom:5%;">If a difficult feeling arises, such as boredom, impatience, or anxiety, simply acknowledge it. Say to yourself “Here is a feeling of boredom”, “Here is a feeling of impatience”, “Here is a feeling of anxiety”, and place those words on a leaf. Continuing to place each thought that pops into your mind on a leaf, and watching it slip by.</p>
+          <img src="images/pic23.png" alt="mindfulness-meditate" style="height:50%;width:50%;margin-left:20%;margin-right:20%;">
+        </div>
+      </div><br>
+      <div class="header mx-auto col-sm-3 col-md-6 col-lg-4">
+        <button class="collapsible" style="font-size: 18px;height:75px">5. Ground yourself</button>
+        <div class="content" style="background-color:grey;">
+          <p style="padding-top:5%;padding-bottom:5%;">As the exercise comes to an end, begin to let go of your imagined stream and bring your attention back to where you are... notice what you can hear... what you can feel... and when your ready, open your eyes and notice what you can see. You might like to take another minute to sit quietly before carrying on with your day. Holding on to this sense of presence and spaciousness from thinking.</p>
+          <img src="images/pic23.png" alt="mindfulness-meditate" style="height:50%;width:50%;margin-left:20%;margin-right:20%;">
+        </div>
+      </div><br>
+    </section>
+    <br>
+    <div class="text-center">
+      <button class="button-play col-lg-2 col-sm" id="gotoActivity3" role="button" style="font-size: 20px;">Next</button>
+    </div>
+    <br><br>
+    <script>
+      document.getElementById('gotoActivity3').addEventListener('click', function () {
+              window.location.href = 'activity5.html';
+          });
+    </script>
+    <script>
+      const collapsibleBtns = document.querySelectorAll('.collapsible');
+      const contentDivs = document.querySelectorAll('.content');
+
+      collapsibleBtns.forEach((btn, index) => {
+        btn.addEventListener('click', () => {
+          contentDivs[index].style.maxHeight = contentDivs[index].style.maxHeight ? null : contentDivs[index].scrollHeight + 'px';
+          btn.classList.toggle('active');
+        });
+      });
+    </script>
+  </body>
+</html>

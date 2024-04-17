@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dog</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: 'Alatsi', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font-size: 20px;
+  background-image: linear-gradient(315deg, #f8f9d2 0%, #e8dbfc 74%);
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Alatsi', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font-size: 20px;
+}
+.w3-row-padding img {margin-bottom: 12px}
+.bgimg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('images/dog_1.gif');
+  min-height: 100%;
+}
+.collapsible {
+        cursor: pointer;
+        padding: 10px;
+        /* background-color: #f4acb7; */
+        background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(234,249,249,0.67) 0.1%, rgba(239,249,251,0.63) 90.1% );
+        border: none;
+        text-align: left;
+        outline: none;
+        width: 100%;
+        transition: background-color 0.5s;
+      }
+
+      .content {
+        background: linear-gradient(to bottom right, #d8e2dc, white 200%);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-out;
+      }
+
+      .content p {
+        margin: 10px;
+      }
+@media (max-width: 768px) {
+            .bgimg {
+                background-image: url('images/dog_1.jpg');
+            }
+        }
+        #video {
+  border: 1px solid black;
+  box-shadow: 2px 2px 3px black;
+  width: 320px;
+  height: 240px;
+}
+
+#photo {
+  border: 1px solid black;
+  box-shadow: 2px 2px 3px black;
+  width: 320px;
+  height: 240px;
+}
+
+#canvas {
+  display: none;
+}
+
+.camera {
+  width: 340px;
+  display: inline-block;
+}
+
+.output {
+  width: 340px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+#startbutton {
+    position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background-color: rgba(0, 150, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            box-shadow: 0px 0px 1px 2px white;
+            font-size: 14px;
+            font-family: "Lucida Grande", "Arial", sans-serif;
+            color: rgba(255, 255, 255, 1);
+  }
+
+  .contentarea {
+    font-size: 16px;
+    font-family: "Lucida Grande", "Arial", sans-serif;
+    width: 760px;
+  }
+  .button-desc {
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid rgba(188,120,236,1);
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: black;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    min-height: 60px;
+    min-width: 0;
+    outline: none;
+    padding: 16px 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    /* width: 30%; */
+    will-change: transform;
+  }
+
+  .button-desc:disabled {
+    pointer-events: none;
+  }
+
+  .button-desc:hover {
+    color: #fff;
+    background-color: rgba(188,120,236,1);
+    box-shadow: rgba(188,120,236,1) 0 8px 15px;
+    transform: translateY(-2px);
+  }
+
+  .button-desc:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+  .close {
+    display: none;
+  }
+
+  .button-30 {
+  align-items: center;
+  appearance: none;
+  background-color: #FCFCFD;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #000;
+  cursor: pointer;
+  display: inline-flex;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+  }
+
+  .button-30:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  }
+
+  .button-30:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+  }
+
+  .button-30:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+  }
+
+</style>
+</head>
+
+
+
+<body>
+
+<!-- Sidebar with image -->
+<nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%">
+  <div class="bgimg"></div>
+</nav>
+
+<!-- Hidden Sidebar (reveals when clicked on menu icon)-->
+<nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topright" style="padding:0 12px;">
+    <i class="fa fa-remove"></i>
+  </a>
+  <div class="w3-bar-block w3-center">
+    <a href="#home" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Home</a>
+    <a href="#general" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">General</a>
+    <a href="#level" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Levels</a>
+    <a href="#exampleModalLong" class="w3-bar-item w3-button w3-text-grey w3-hover-black"  data-toggle="modal" data-target="#exampleModalLong" onclick="closeNav()">Description</a>
+
+  </div>
+</nav>
+
+<!-- Page Content -->
+<div class="w3-main w3-padding-large" style="margin-left:40%">
+
+  <!-- Menu icon to open sidebar -->
+  <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black" style="width:auto;right:0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
+
+  <!-- Header -->
+  <header class="w3-container w3-center" style="padding:128px 16px" id="home">
+    <h1 class="w3-jumbo"><b>DOG</b></h1>
+    <img src="images/dog_1.gif" class="w3-image w3-hide-large w3-hide-small w3-round" style="display:block;width:60%;margin:auto;" id="change_image1">
+    <img src="images/dog_1.gif" class="w3-image w3-hide-large w3-hide-medium w3-round" width="1000" height="1333" id="change_image2">
+    <p id="change_level">Level 0</p>
+    <img src="images/null.png" style="height: 100px;width: 100px;" id="food_1">
+    <img src="images/null.png" style="height: 100px;width: 100px;" id="food_2">
+    <img src="images/null.png" style="height: 100px;width: 100px;" id="food_3">
+    <img src="images/null.png" style="height: 100px;width: 100px;" id="food_4">
+    <img src="images/null.png" style="height: 100px;width: 100px;" id="food_5">
+  </header>
+
+  <!-- General Section -->
+  <button type="button" class="button-desc display-5" data-toggle="modal" data-target="#exampleModalLong"> How To Increase Your level?
+  </button>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">ABOUT GAME</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-center">
+            <img src="images/m1.png" style="height: 150px; width: 200px;" class="mx-auto">
+            <p>In this game you choose your avatar which is your pet.
+                Please note that you should choose your pet whose characteristics represent you the most.
+                After your selection, your character is born, meaning your pet's level is 0.
+                Your pet grows as level increases..
+            </p>
+            <h1 class="jumbotron" style="background-color:white;">How to increase level?</h1>
+            <img src="images/m3.png" style="height: 150px;width: 200px;" class="mx-auto">
+            <p>Your are provided with activites or daily tasks which helps you to understand and improve your mindfulness.
+                At the completion of each task you are given a token.<br>
+                TOKEN - is like a daily nutrition which helps your pet to grow.<br>
+                 Example:<br> for a Dog : you get a bone token,<br> for a Cat : you get a fish token , <br>for bunny : you get a carrot..<br>
+                 After collecting 5 tokens your level is increased by 1.<br>
+                 Now you may notice that your pet has grown. This shows that gradually you are more mindful.
+             </p>
+             <img src="images/m2.png" style="height: 150px;width: 200px;" class="mx-auto">
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w3-padding-32 w3-content" id="general">
+    <h2 class="w3-text-grey">About...</h2>
+    <p class="w3-text-grey">People who choose dogs often value companionship and a strong emotional bond.
+        Dogs typically need daily exercise and mental stimulation.
+        People who choose dogs may have an active lifestyle and appreciate the opportunity to engage in outdoor activities like walking, hiking, or playing fetch.
+        Dogs are often seen as part of the family. People who choose dogs may prioritize family life and include their pets as integral members of their households.
+    </p>
+    <hr class="w3-opacity">
+
+    <!-- Grid for photos -->
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half">
+        <img src="images/dog_2.png" style="width:100%">
+      </div>
+
+      <div class="w3-half">
+        <img src="images/dog_3.png" style="width:100%">
+      </div>
+      <br><br>
+    <!-- End photo grid -->
+    </div>
+  <!-- End General Section -->
+  </div>
+
+  <!-- level Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="level">
+
+    <!-- Grid for pricing tables -->
+    <h2 class="w3-padding-16 display-4 text-center">My Levels</h2><hr><br>
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half w3-margin-bottom">
+        <ul class="w3-ul w3-center w3-card w3-hover-shadow">
+          <li class="w3-xlarge w3-padding-32" style="color: white;background-image: linear-gradient( 90.4deg,  rgba(188,120,236,1) -2.2%, rgba(29,133,163,1) 83.5% );">LEVEL 1</li>
+          <li class="w3-padding-16" style="background-color:#fffffc;">Loyal Reflection</li>
+          <li class="w3-padding-16" style="background-color:#fffffc;">Playful Imaginings</li>
+          <li class="w3-padding-16" style="background-color:#fffffc;">Energetic Movement</li>
+          <li class="w3-padding-16" style="background-color:#fffffc;">Social Connection</li>
+          <li class="w3-padding-16" style="background-color:#fffffc;">Morning Stretch</li>
+          <li class="w3-padding-24" style="background-image: radial-gradient( circle 588px at 31.7% 40.2%,  rgba(225,200,239,1) 21.4%, rgba(163,225,233,1) 57.1% );">
+            <button class="w3-button button-30"  data-toggle="modal" data-target="#Modal1" onclick="startLevel(1)"><i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;START</button>
+            <div class="modal fade" id="Modal1" tabindex="-1" role="dialog" aria-labelledby="Modal1Title" aria-hidden="true">
+              <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="Modal1">LEVEL 1 TASKS</h5>
+                    <button type="button" class="close" data-dismiss="Modal1" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <!--modal content-->
+                  <div class="modal-body text-center">
+                    <section id="intro" class="mx-auto" style="margin-top:5%;">
+                      <div class="header mx-auto col-sm-3 col-md-6 col-lg-6">
+                        <button class="collapsible" style="height:55px">1.Loyal Reflection:</button>
+                        <div class="content" style="background-color:grey;">
+                          <p style="padding-top:5%;padding-bottom:5%;">Reflect on your closest relationships. Acknowledge the loyalty and love you share with your friends and family.</p>
+                          <img src="images/d1.png" alt="confused" style="height:50%;width:50%;margin-left:20%;margin-right:20%;">
+                          <button type="button" class="btn btn-outline-success" onclick="increaseCount(this)">DONE</button>
+                        </div>
+                      </div><br>
+                      <div class="header mx-auto col-sm-3 col-md-6 col-lg-6">
+                        <button class="collapsible" style="height:55px">2.Playful Imaginings:</button>
+                        <div class="content" style="background-color:grey;">
+                          <p style="padding-top:5%;padding-bottom:5%;">Take a moment to imagine a scenario that brings you joy and playfulness. Visualize it in detail, engaging your senses.</p>
+                          <img src="images/d2.png" alt="confused" style="height:50%;width:50%;margin-left:20%;margin-right:20%;">
+                          <button type="button" class="btn btn-outline-success" onclick="increaseCount(this)">DONE</button>
+                        </div>
+                      </div><br>
+                      <div class="header mx-auto col-sm-3 col-md-6 col-lg-6">
+                        <button class="collapsible" style="height:55px">3.Energetic Movement:</button>
+                        <div class="content" style="background-color:grey;">
+                          <p style="padding-top:5%;padding-bottom:5%;">Engage in a physical activity you enjoy, focusing on the energy flowing through your body with each movement.</p>
+                          <img src="images/d3.png" alt="confused" style="height:50%;width:50%;margin-left:20%;margin-right:20%;">
+                          <button type="button" class="btn btn-outline-success" onclick="increaseCount(this)">DONE</button>
+                        </div>
+                      </div><br>
+                      <div class="header mx-auto col-sm-3 col-md-6 col-lg-6">
+                        <button class="collapsible" style="height:55px">4.Social Connection:</button>
+                        <div class="content" style="background-color:grey;">
+                          <p style="padding-top:5%;padding-bottom:5%;">Reach out to a friend you haven't spoken to in a while. Practice active listening during the conversation, valuing the connection.</p>
+                          <img src="images/d4.png" alt="confused" style="height:50%;width:50%;margin-left:20%;margin-right:20%;">
+                          <button type="button" class="btn btn-outline-success" onclick="increaseCount(this)">DONE</button>
+                        </div>
+                      </div><br>
+                      <div class="header mx-auto col-sm-3 col-md-6 col-lg-6">
+                        <button class="collapsible" style="height:55px">5.Morning Stretch:</button>
+                        <div class="content" style="background-color:grey;">
+                          <p style="padding-top:5%;padding-bottom:5%;">Start your day with a gentle stretching routine. Feel the awakening of your body and the flexibility of your muscles.</p>
+                          <img src="images/d3.png" alt="confused" style="height:50%;width:50%;margin-left:20%;margin-right:20%;">
+                          <button type="button" class="btn btn-outline-success" onclick="increaseCount(this)">DONE</button>
+                        </div>
+                      </div><br>
+
+                    </section>
+                    <!--end of modal content-->
+                  </div>
+
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!--start of photobooth-->
+            <button type="button" class="button-30" data-toggle="modal" data-target="#myModal">
+              <i class="fa fa-camera" aria-hidden="true"></i>&nbsp;&nbsp;Booth
+          </button>
+
+          <!-- The Modal -->
+          <div class="modal" id="myModal">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                          <h4 class="modal-title">Let's capture your moment</h4>
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                          <div class="camera">
+                              <video id="video">Video stream not available.</video>
+                              <button id="requestPermissionButton" class="btn btn-success">Request Camera Permission</button>
+                              <button id="turnOffCameraButton" class="btn btn-danger" disabled>Turn Off Camera</button>
+                              <button id="startbutton" class="btn btn-primary" disabled>Take photo</button>
+                          </div>
+                          <canvas id="canvas"></canvas>
+                          <div class="output">
+                              <img id="photo" alt="The screen capture will appear in this box." />
+                          </div>
+                      </div>
+
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+
+                  </div>
+              </div>
+              <!--end of photo booth-->
+          </li>
+        </ul>
+      </div>
+
+
+      <div class="w3-half">
+        <ul class="w3-ul w3-center w3-card w3-hover-shadow">
+          <li class="w3-xlarge w3-padding-32" style="color: white;background-image: linear-gradient( 90.4deg,  rgba(188,120,236,1) -2.2%, rgba(29,133,163,1) 83.5% );">LEVEL 2</li>
+          <li class="w3-padding-16" style="background-color:#fffffc;">Playful Creativity</li>
+          <li class="w3-padding-16" style="background-color:#fffffc;">Outdoor Exploration</li>
+          <li class="w3-padding-16" style="background-color:#fffffc;">Mindful Breathing</li>
+          <li class="w3-padding-16" style="background-color:#fffffc;">Caring Gesture</li>
+          <li class="w3-padding-16" style="background-color:#fffffc;">Reflective Loyalty</li>
+          <li class="w3-padding-24" style="background-image: radial-gradient( circle 588px at 31.7% 40.2%,  rgba(225,200,239,1) 21.4%, rgba(163,225,233,1) 57.1% );">
+            <button class="w3-button button-30"  data-toggle="modal" data-target="#Modal2" onclick="startLevel(2)" id="level2Button"><i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;START</button>
+            <div class="modal fade" id="Modal2" tabindex="-1" role="dialog" aria-labelledby="Modal2Title" aria-hidden="true">
+              <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="Modal2">LEVEL 2 TASKS</h5>
+                    <button type="button" class="close" data-dismiss="Modal2" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <!--modal content-->
+                  <div class="modal-body text-center">
+                    <section id="intro" class="mx-auto" style="margin-top:5%;">
+                      <div class="header mx-auto col-sm-3 col-md-6 col-lg-6">
+                        <button class="collapsible" style="height:55px">1.Playful Creativity:</button>
+                        <div class="content" style="background-color:grey;">
+                          <p style="padding-top:5%;padding-bottom:5%;">Engage in a creative activity, such as drawing or crafting. Allow your imagination to flow freely, embracing the playful spirit.</p>
+                          <img src="images/d6.png" alt="confused" style="height:50%;width:50%;margin-left:20%;margin-right:20%;">
+                          <button type="button" class="btn btn-outline-success" onclick="increaseCount(this)">DONE</button>
+                        </div>
+                      </div><br>
+                      <div class="header mx-auto col-sm-3 col-md-6 col-lg-6">
+                        <button class="collapsible" style="height:55px">2.Outdoor Exploration:</button>
+                        <div class="content" style="background-color:grey;">
+                          <p style="padding-top:5%;padding-bottom:5%;">Take a walk in nature. Observe the surroundings, breathe in the fresh air, and appreciate the beauty of the natural world.</p>
+                          <img src="images/d7.png" alt="confused" style="height:50%;width:50%;margin-left:20%;margin-right:20%;">
+                          <button type="button" class="btn btn-outline-success" onclick="increaseCount(this)">DONE</button>
+                        </div>
+                      </div><br>
+                      <div class="header mx-auto col-sm-3 col-md-6 col-lg-6">
+                        <button class="collapsible" style="height:55px">3.Mindful Breathing:</button>
+                        <div class="content" style="background-color:grey;">
+                          <p style="padding-top:5%;padding-bottom:5%;">Practice deep breathing exercises. Inhale positivity and exhale stress, focusing on the rhythm of your breath.</p>
+                          <img src="images/q18.png" alt="confused" style="height:50%;width:50%;margin-left:20%;margin-right:20%;">
+                          <button type="button" class="btn btn-outline-success" onclick="increaseCount(this)">DONE</button>
+                        </div>
+                      </div><br>
+                      <div class="header mx-auto col-sm-3 col-md-6 col-lg-6">
+                        <button class="collapsible" style="height:55px">4.Caring Gesture:</button>
+                        <div class="content" style="background-color:grey;">
+                          <p style="padding-top:5%;padding-bottom:5%;">Perform a random act of kindness. Notice the warm feeling in your heart as you bring a smile to someone else's face.</p>
+                          <img src="images/q20.png" alt="confused" style="height:50%;width:50%;margin-left:20%;margin-right:20%;">
+                          <button type="button" class="btn btn-outline-success" onclick="increaseCount(this)">DONE</button>
+                        </div>
+                      </div><br>
+                      <div class="header mx-auto col-sm-3 col-md-6 col-lg-6">
+                        <button class="collapsible" style="height:55px">5.Reflective Loyalty:</button>
+                        <div class="content" style="background-color:grey;">
+                          <p style="padding-top:5%;padding-bottom:5%;">Write down the qualities you appreciate in your closest friends. Reflect on the loyalty and support you give and receive.</p>
+                          <img src="images/q17.png" alt="confused" style="height:50%;width:50%;margin-left:20%;margin-right:20%;">
+                          <button type="button" class="btn btn-outline-success" onclick="increaseCount(this)">DONE</button>
+                        </div>
+                      </div><br>
+
+                    </section>
+                    <!--end of modal content-->
+                  </div>
+
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+             <!--start of photobooth-->
+             <button type="button" class="button-30" data-toggle="modal" data-target="#myModal">
+              <i class="fa fa-camera" aria-hidden="true"></i>&nbsp;&nbsp;Booth
+          </button>
+
+          <!-- The Modal -->
+          <div class="modal" id="myModal">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                          <h4 class="modal-title">Let's capture your moment</h4>
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                          <div class="camera">
+                              <video id="video">Video stream not available.</video>
+                              <button id="requestPermissionButton" class="btn btn-success">Request Camera Permission</button>
+                              <button id="turnOffCameraButton" class="btn btn-danger" disabled>Turn Off Camera</button>
+                              <button id="startbutton" class="btn btn-primary" disabled>Take photo</button>
+                          </div>
+                          <canvas id="canvas"></canvas>
+                          <div class="output">
+                              <img id="photo" alt="The screen capture will appear in this box." />
+                          </div>
+                      </div>
+
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+
+                  </div>
+              </div>
+              <!--end of photo booth-->
+          </li>
+        </ul>
+      </div>
+      <div class="w3-row-padding" style="margin:0 -16px">
+        <div class="w3-half w3-margin-bottom">
+          <ul class="w3-ul w3-center w3-card w3-hover-shadow">
+            <li class="w3-xlarge w3-padding-32" style="color: white;background-image: linear-gradient( 90.4deg,  rgba(188,120,236,1) -2.2%, rgba(29,133,163,1) 83.5% );">LEVEL 3</li>
+            <li class="w3-padding-16" style="background-color:#fffffc;">Laughter Yoga</li>
+          <li class="w3-padding-16" style="background-color:#fffffc;">Energetic Dance</li>
+          <li class="w3-padding-16" style="background-color:#fffffc;">Mindful Listening</li>
+          <li class="w3-padding-16" style="background-color:#fffffc;">Social Gathering</li>
+          <li class="w3-padding-16" style="background-color:#fffffc;">Appreciative Journaling</li>
+            <li class="w3-padding-24" style="background-image: radial-gradient( circle 588px at 31.7% 40.2%,  rgba(225,200,239,1) 21.4%, rgba(163,225,233,1) 57.1% );">
+              <button class="w3-button button-30"  data-toggle="modal" data-target="#Modal3" onclick="startLevel(3)" id="level3Button"><i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;START</button>
+            <div class="modal fade" id="Modal3" tabindex="-1" role="dialog" aria-labelledby="Modal3Title" aria-hidden="true">
+              <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="Modal3">LEVEL 3 TASKS</h5>
+                    <button type="button" class="close" data-dismiss="Modal3" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <!--modal content-->
+                  <div class="modal-body text-center">
+                    <section id="intro" class="mx-auto" style="margin-top:5%;">
+                      <div class="header mx-auto col-sm-3 col-md-6 col-lg-6">
+                        <button class="collapsible" style="height:55px">1.Laughter Yoga:</button>
+                        <div class="content" style="background-color:grey;">
+                          <p style="padding-top:5%;padding-bottom:5%;">Watch a comedy show or engage in laughter yoga exercises. Feel the laughter bubbling up from within, releasing tension.</p>
+                          <img src="images/d5.png" alt="confused" style="height:50%;width:50%;margin-left:20%;margin-right:20%;">
+                          <button type="button" class="btn btn-outline-success" onclick="increaseCount(this)">DONE</button>
+                        </div>
+                      </div><br>
+                      <div class="header mx-auto col-sm-3 col-md-6 col-lg-6">
+                        <button class="collapsible" style="height:55px">2.Energetic Dance:</button>
+                        <div class="content" style="background-color:grey;">
+                          <p style="padding-top:5%;padding-bottom:5%;">Put on your favorite music and dance freely. Focus on the rhythm and the way your body moves in response.</p>
+                          <img src="images/d12.png" alt="confused" style="height:50%;width:50%;margin-left:20%;margin-right:20%;">
+                          <button type="button" class="btn btn-outline-success" onclick="increaseCount(this)">DONE</button>
+                        </div>
+                      </div><br>
+                      <div class="header mx-auto col-sm-3 col-md-6 col-lg-6">
+                        <button class="collapsible" style="height:55px">3.Mindful Listening:</button>
+                        <div class="content" style="background-color:grey;">
+                          <p style="padding-top:5%;padding-bottom:5%;">Listen to your favorite music or sounds of nature. Close your eyes and immerse yourself completely in the auditory experience.</p>
+                          <img src="images/d13.png" alt="confused" style="height:50%;width:50%;margin-left:20%;margin-right:20%;">
+                          <button type="button" class="btn btn-outline-success" onclick="increaseCount(this)">DONE</button>
+                        </div>
+                      </div><br>
+                      <div class="header mx-auto col-sm-3 col-md-6 col-lg-6">
+                        <button class="collapsible" style="height:55px">4.Social Gathering:</button>
+                        <div class="content" style="background-color:grey;">
+                          <p style="padding-top:5%;padding-bottom:5%;">Attend a social event or gathering. Engage in conversations, appreciating the diverse personalities and perspectives around you.</p>
+                          <img src="images/q4.png" alt="confused" style="height:50%;width:50%;margin-left:20%;margin-right:20%;">
+                          <button type="button" class="btn btn-outline-success" onclick="increaseCount(this)">DONE</button>
+                        </div>
+                      </div><br>
+                      <div class="header mx-auto col-sm-3 col-md-6 col-lg-6">
+                        <button class="collapsible" style="height:55px">5.Appreciative Journaling:</button>
+                        <div class="content" style="background-color:grey;">
+                          <p style="padding-top:5%;padding-bottom:5%;">Start a gratitude journal. Write down three things you're thankful for every day, appreciating the positive aspects of your life.</p>
+                          <img src="images/q13.png" alt="confused" style="height:50%;width:50%;margin-left:20%;margin-right:20%;">
+                          <button type="button" class="btn btn-outline-success" onclick="increaseCount(this)">DONE</button>
+                        </div>
+                      </div><br>
+
+                    </section>
+                    <!--end of modal content-->
+                  </div>
+
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+             <!--start of photobooth-->
+             <button type="button" class="button-30" data-toggle="modal" data-target="#myModal">
+              <i class="fa fa-camera" aria-hidden="true"></i>&nbsp;&nbsp;Booth
+          </button>
+
+          <!-- The Modal -->
+          <div class="modal" id="myModal">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                          <h4 class="modal-title">Let's capture your moment</h4>
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                          <div class="camera">
+                              <video id="video">Video stream not available.</video>
+                              <button id="requestPermissionButton" class="btn btn-success">Request Camera Permission</button>
+                              <button id="turnOffCameraButton" class="btn btn-danger" disabled>Turn Off Camera</button>
+                              <button id="startbutton" class="btn btn-primary" disabled>Take photo</button>
+                          </div>
+                          <canvas id="canvas"></canvas>
+                          <div class="output">
+                              <img id="photo" alt="The screen capture will appear in this box." />
+                          </div>
+                      </div>
+
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+
+                  </div>
+              </div>
+              <!--end of photo booth-->
+            </li>
+          </ul>
+        </div>
+
+        <div class="w3-half">
+            <ul class="w3-ul w3-center w3-card w3-hover-shadow">
+              <li class="w3-xlarge w3-padding-32" style="color: white;background-image: linear-gradient( 90.4deg,  rgba(188,120,236,1) -2.2%, rgba(29,133,163,1) 83.5% );">LEVEL 4</li>
+              <li class="w3-padding-16" style="background-color:#fffffc;">Volunteering</li>
+              <li class="w3-padding-16" style="background-color:#fffffc;">Acts of Service</li>
+              <li class="w3-padding-16" style="background-color:#fffffc;">Random Acts of Kindness</li>
+              <li class="w3-padding-16" style="background-color:#fffffc;">Interactive Learning</li>
+              <li class="w3-padding-16" style="background-color:#fffffc;">Mindful Eating</li>
+              <li class="w3-padding-24" style="background-image: radial-gradient( circle 588px at 31.7% 40.2%,  rgba(225,200,239,1) 21.4%, rgba(163,225,233,1) 57.1% );">
+                <button class="w3-button button-30"  data-toggle="modal" data-target="#Modal4" onclick="startLevel(4)" id="level4Button"><i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;START</button>
+            <div class="modal fade" id="Modal4" tabindex="-1" role="dialog" aria-labelledby="Modal1Title" aria-hidden="true">
+              <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="Modal4">LEVEL 4 TASKS</h5>
+                    <button type="button" class="close" data-dismiss="Modal4" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <!--modal content-->
+                  <div class="modal-body text-center">
+                    <section id="intro" class="mx-auto" style="margin-top:5%;">
+                      <div class="header mx-auto col-sm-3 col-md-6 col-lg-6">
+                        <button class="collapsible" style="height:55px">1.Volunteering:</button>
+                        <div class="content" style="background-color:grey;">
+                          <p style="padding-top:5%;padding-bottom:5%;">Volunteer for a cause you believe in. Experience the fulfillment that comes from helping others and making a difference.</p>
+                          <img src="images/q16.png" alt="confused" style="height:50%;width:50%;margin-left:20%;margin-right:20%;">
+                          <button type="button" class="btn btn-outline-success" onclick="increaseCount(this)">DONE</button>
+                        </div>
+                      </div><br>
+                      <div class="header mx-auto col-sm-3 col-md-6 col-lg-6">
+                        <button class="collapsible" style="height:55px">2.Acts of Service:</button>
+                        <div class="content" style="background-color:grey;">
+                          <p style="padding-top:5%;padding-bottom:5%;">Help someone in need, whether it's a neighbor, colleague, or stranger. Notice the sense of fulfillment from contributing to others' well-being.</p>
+                          <img src="images/m1.png" alt="confused" style="height:50%;width:50%;margin-left:20%;margin-right:20%;">
+                          <button type="button" class="btn btn-outline-success" onclick="increaseCount(this)">DONE</button>
+                        </div>
+                      </div><br>
+                      <div class="header mx-auto col-sm-3 col-md-6 col-lg-6">
+                        <button class="collapsible" style="height:55px">3.Random Acts of Kindness:</button>
+                        <div class="content" style="background-color:grey;">
+                          <p style="padding-top:5%;padding-bottom:5%;">Perform small acts of kindness throughout your day, like holding the door for someone or offering a compliment. Focus on the positive impact you can make.</p>
+                          <img src="images/q4.png" alt="confused" style="height:50%;width:50%;margin-left:20%;margin-right:20%;">
+                          <button type="button" class="btn btn-outline-success" onclick="increaseCount(this)">DONE</button>
+                        </div>
+                      </div><br>
+                      <div class="header mx-auto col-sm-3 col-md-6 col-lg-6">
+                        <button class="collapsible" style="height:55px">4.Interactive Learning:</button>
+                        <div class="content" style="background-color:grey;">
+                          <p style="padding-top:5%;padding-bottom:5%;"> Engage in a new learning experience, such as a workshop or online course. Embrace the curiosity and eagerness to expand your knowledge.</p>
+                          <img src="images/q19.png" alt="confused" style="height:50%;width:50%;margin-left:20%;margin-right:20%;">
+                          <button type="button" class="btn btn-outline-success" onclick="increaseCount(this)">DONE</button>
+                        </div>
+                      </div><br>
+                      <div class="header mx-auto col-sm-3 col-md-6 col-lg-6">
+                        <button class="collapsible" style="height:55px">5.Mindful Eating:</button>
+                        <div class="content" style="background-color:grey;">
+                          <p style="padding-top:5%;padding-bottom:5%;">Practice mindful eating during your meals. Focus on the flavors, textures, and aroma of your food, appreciating each bite.</p>
+                          <img src="images/q14.png" alt="confused" style="height:50%;width:50%;margin-left:20%;margin-right:20%;">
+                          <button type="button" class="btn btn-outline-success" onclick="increaseCount(this)">DONE</button>
+                        </div>
+                      </div><br>
+
+                    </section>
+                    <!--end of modal content-->
+                  </div>
+
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+             <!--start of photobooth-->
+             <button type="button" class="button-30" data-toggle="modal" data-target="#myModal">
+              <i class="fa fa-camera" aria-hidden="true"></i>&nbsp;&nbsp;Booth
+          </button>
+
+          <!-- The Modal -->
+          <div class="modal" id="myModal">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                          <h4 class="modal-title">Let's capture your moment</h4>
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                          <div class="camera">
+                              <video id="video">Video stream not available.</video>
+                              <button id="requestPermissionButton" class="btn btn-success">Request Camera Permission</button>
+                              <button id="turnOffCameraButton" class="btn btn-danger" disabled>Turn Off Camera</button>
+                              <button id="startbutton" class="btn btn-primary" disabled>Take photo</button>
+                          </div>
+                          <canvas id="canvas"></canvas>
+                          <div class="output">
+                              <img id="photo" alt="The screen capture will appear in this box." />
+                          </div>
+                      </div>
+
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+
+                  </div>
+              </div>
+              <!--end of photo booth-->
+              </li>
+            </ul>
+          </div>
+
+
+    <!-- End Grid/Pricing tables -->
+    </div>
+
+  <!-- End level Section -->
+  </div>
+
+
+
+
+
+<!-- END PAGE CONTENT -->
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script>
+  const levelBackgrounds = [
+    'images/dog_1.gif', // Level 0
+    'images/dog_1.gif', // Level 1 background image URL
+    'images/dog_level1.gif', // Level 2 background image URL
+    'images/dog_level2.gif', // Level 3 background image URL
+    'images/dog_level3.gif', // Level 4 background image URL
+  ];
+ let count=0;
+ let curimagesvel = 0; // Track the current level
+ updateStartButtons();
+// Open and close sidebar
+function openNav() {
+  document.getElementById("mySidebar").style.width = "60%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+const collapsibleBtns = document.querySelectorAll('.collapsible');
+      const contentDivs = document.querySelectorAll('.content');
+
+      collapsibleBtns.forEach((btn, index) => {
+        btn.addEventListener('click', () => {
+          contentDivs[index].style.maxHeight = contentDivs[index].style.maxHeight ? null : contentDivs[index].scrollHeight + 'px';
+          btn.classList.toggle('active');
+        });
+      });
+
+
+        //increase count value
+        function increaseCount(button){
+          count=count+1;
+          //console.log(count);
+          button.disabled=true;
+          // Call updateStartButtons initially
+          updateStartButtons();
+        }
+  // Function to check if the user can start a level
+function startLevel(level) {
+    document.querySelector('.bgimg').style.backgroundImage = `url('${levelBackgrounds[level]}')`;
+    // Change the image source for the first image
+    const changeImage1 = document.getElementById('change_image1');
+    if (changeImage1) {
+        changeImage1.src = levelBackgrounds[level];
+    }
+
+    // Change the image source for the second image
+    const changeImage2 = document.getElementById('change_image2');
+    if (changeImage2) {
+        changeImage2.src = levelBackgrounds[level];
+    }
+    if (level === 1 && count >= 5) {
+        // Allow starting level 1
+        $('#Modal1').modal('show');
+    } else if (level === 2 && count >= 10) {
+        // Allow starting level 2
+        $('#Modal2').modal('show');
+    } else if (level === 3 && count >= 15) {
+        // Allow starting level 3
+        $('#Modal3').modal('show');
+    } else if (level === 4 && count >= 20) {
+        // Allow starting level 4
+        $('#Modal4').modal('show');
+    } else {
+        //console.log("You need to complete all tasks in the previous Level  first.");
+    }
+}
+// Update the "START" buttons based on the count value
+function updateStartButtons() {
+    const level2Button = document.getElementById('level2Button');
+    const level3Button = document.getElementById('level3Button');
+    const level4Button = document.getElementById('level4Button');
+
+    if (count < 5) {
+        // Disable all level buttons initially
+        document.getElementById('change_level').innerHTML ='Level 1';
+        level2Button.disabled = true;
+        level3Button.disabled = true;
+        level4Button.disabled = true;
+    } else if (count >= 5 && count < 10) {
+        // Enable level 2 when count reaches 5
+        document.getElementById('change_level').innerHTML ='Level 2';
+        level2Button.disabled = false;
+    } else if (count >= 10 && count < 15) {
+        // Enable level 3 when count reaches 10
+        document.getElementById('change_level').innerHTML ='Level 3';
+        level2Button.disabled = false;
+        level3Button.disabled = false;
+    } else if (count >= 15) {
+        // Enable level 4 when count reaches 15
+        document.getElementById('change_level').innerHTML ='Level 4';
+        level2Button.disabled = false;
+        level3Button.disabled = false;
+        level4Button.disabled = false;
+    }
+    if(count==1 || count==6 || count==11 || count==16){
+      document.getElementById('food_1').src="images/dog_food.png";
+      document.getElementById('food_2').src="images/null.png";
+      document.getElementById('food_3').src="images/null.png";
+      document.getElementById('food_4').src="images/null.png";
+      document.getElementById('food_5').src="images/null.png";
+    }
+    else if(count==2 || count==7 || count==12 || count==17){
+      document.getElementById('food_1').src="images/dog_food.png";
+      document.getElementById('food_2').src="images/dog_food.png";
+      document.getElementById('food_3').src="images/null.png";
+      document.getElementById('food_4').src="images/null.png";
+      document.getElementById('food_5').src="images/null.png";
+    }
+    else if(count==3 || count==8 || count==13 || count==18){
+      document.getElementById('food_1').src="images/dog_food.png";
+      document.getElementById('food_2').src="images/dog_food.png";
+      document.getElementById('food_3').src="images/dog_food.png";
+      document.getElementById('food_4').src="images/null.png";
+      document.getElementById('food_5').src="images/null.png";
+    }
+    else if(count==4 || count==9 || count==14 || count==19){
+      document.getElementById('food_1').src="images/dog_food.png";
+      document.getElementById('food_2').src="images/dog_food.png";
+      document.getElementById('food_3').src="images/dog_food.png";
+      document.getElementById('food_4').src="images/dog_food.png";
+      document.getElementById('food_5').src="images/null.png";
+    }
+    else if(count==5 || count==10 || count==15 || count==20){
+      document.getElementById('food_1').src="images/dog_food.png";
+      document.getElementById('food_2').src="images/dog_food.png";
+      document.getElementById('food_3').src="images/dog_food.png";
+      document.getElementById('food_4').src="images/dog_food.png";
+      document.getElementById('food_5').src="images/dog_food.png";
+    }
+
+}
+(() => {
+            const width = 320;
+            let height = 0;
+            let streaming = false;
+            let video = null;
+            let canvas = null;
+            let photo = null;
+            let startbutton = null;
+            let requestPermissionButton = null;
+            let turnOffCameraButton = null;
+            let stream = null;
+
+            function showViewLiveResultButton() {
+                if (window.self !== window.top) {
+                    document.querySelector(".contentarea").remove();
+                    const button = document.createElement("button");
+                    button.textContent = "View live result of the example code above";
+                    document.body.append(button);
+                    button.addEventListener("click", () => window.open(location.href));
+                    return true;
+                }
+                return false;
+            }
+
+            function startup() {
+                if (showViewLiveResultButton()) {
+                    return;
+                }
+                video = document.getElementById("video");
+                canvas = document.getElementById("canvas");
+                photo = document.getElementById("photo");
+                startbutton = document.getElementById("startbutton");
+                requestPermissionButton = document.getElementById("requestPermissionButton");
+                turnOffCameraButton = document.getElementById("turnOffCameraButton");
+
+                requestPermissionButton.addEventListener("click", function () {
+                    // Request camera permission
+                    navigator.mediaDevices
+                        .getUserMedia({ video: true, audio: false })
+                        .then((newStream) => {
+                            stream = newStream;
+                            video.srcObject = stream;
+                            video.play();
+                            requestPermissionButton.disabled = true; // Disable the button after permission is granted
+                            turnOffCameraButton.disabled = false; // Enable the "Turn Off Camera" button
+                            startbutton.disabled = false; // Enable the "Take photo" button
+                        })
+                        .catch((err) => {
+                            console.error(`An error occurred: ${err}`);
+                        });
+                });
+
+                turnOffCameraButton.addEventListener("click", function () {
+                    // Turn off the camera
+                    if (stream) {
+                        const tracks = stream.getTracks();
+                        tracks.forEach((track) => track.stop());
+                        video.srcObject = null;
+                        requestPermissionButton.disabled = false; // Enable the "Request Camera Permission" button
+                        turnOffCameraButton.disabled = true; // Disable the "Turn Off Camera" button
+                        startbutton.disabled = true; // Disable the "Take photo" button
+                    }
+                });
+
+                video.addEventListener(
+                    "canplay",
+                    (ev) => {
+                        if (!streaming) {
+                            height = video.videoHeight / (video.videoWidth / width);
+                            if (isNaN(height)) {
+                                height = width / (4 / 3);
+                            }
+                            video.setAttribute("width", width);
+                            video.setAttribute("height", height);
+                            canvas.setAttribute("width", width);
+                            canvas.setAttribute("height", height);
+                            streaming = true;
+                        }
+                    },
+                    false,
+                );
+
+                startbutton.addEventListener(
+                    "click",
+                    (ev) => {
+                        takepicture();
+                        ev.preventDefault();
+                    },
+                    false,
+                );
+
+                clearphoto();
+            }
+
+            function clearphoto() {
+                const context = canvas.getContext("2d");
+                context.fillStyle = "#AAA";
+                context.fillRect(0, 0, canvas.width, canvas.height);
+                const data = canvas.toDataURL("image/png");
+                photo.setAttribute("src", data);
+            }
+
+            function takepicture() {
+                const context = canvas.getContext("2d");
+                if (width && height) {
+                    canvas.width = width;
+                    canvas.height = height;
+                    context.drawImage(video, 0, 0, width, height);
+                    const data = canvas.toDataURL("image/png");
+                    photo.setAttribute("src", data);
+                } else {
+                    clearphoto();
+                }
+            }
+
+            // Set up our event listener to run the startup process
+            // once loading is complete.
+            window.addEventListener("load", startup, false);
+        })();
+
+
+
+</script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

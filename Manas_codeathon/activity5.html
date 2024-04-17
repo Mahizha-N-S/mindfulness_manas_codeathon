@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content="HTML Template, site template, seo, marketing, creative, corporate, modern, multipurpose, one page, business, responsive, minimal, saas, startup">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Exercise 3 : Eye of the Hurricane</title>
+    <style>
+    body {
+      font-family: 'Alatsi', sans-serif;
+      margin: 0;
+      /* background-image: linear-gradient(315deg, #f8f9d2 0%, #e8dbfc 74%); */
+      background-image:url("images/pic33.jpg");
+      }
+
+      .navbar-toggler-icon{
+        background-color: white;
+      }
+      .collapsible {
+        cursor: pointer;
+        padding: 10px;
+        background-color: #F4D1D7;
+        /* background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(234,249,249,0.67) 0.1%, rgba(239,249,251,0.63) 90.1% ); */
+        border: none;
+        border-radius: 15px;
+        text-align: left;
+        outline: none;
+        width: 100%;
+        transition: background-color 0.5s;
+      }
+
+      .content {
+        background-color: #f9fcff;
+        background-image: linear-gradient(147deg, #f9fcff 0%, #dee4ea 74%);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-out;
+      }
+
+      .content p {
+        margin: 10px;
+      }
+
+      .collapsible.active {
+        /* background-color: #f4acb7; */
+        color: white;
+        font-size: 20px;
+        transition: smooth;
+        background-image:linear-gradient( 90.4deg,  rgba(188,120,236,1) -2.2%, rgba(29,133,163,1) 83.5% );
+      }
+      .card {
+          border-radius: 50px;
+          transform-style: preserve-3d;
+          background-color: #f0efeb;
+          box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+      }
+      .button-play {
+        appearance: none;
+        background-color: #000000;
+        border: 2px solid #1A1A1A;
+        border-radius: 15px;
+        box-sizing: border-box;
+        color: #FFFFFF;
+        cursor: pointer;
+        display: inline-block;
+        font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+        font-size: 16px;
+        font-weight: 600;
+        line-height: normal;
+        margin: 0;
+        min-height: 60px;
+        min-width: 0;
+        outline: none;
+        padding: 16px 24px;
+        text-align: center;
+        text-decoration: none;
+        transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        width: 100%;
+        will-change: transform;
+      }
+
+      .button-play:disabled {
+        pointer-events: none;
+      }
+
+      .button-play:hover {
+        box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+        transform: translateY(-2px);
+      }
+
+      .button-play:active {
+        box-shadow: none;
+        transform: translateY(0);
+      }
+      video#backgroundvid {
+      position: fixed; right: 0; bottom: 0;
+      min-width: 100%; min-height: 100%;
+      width: auto; height: auto; z-index: -100;
+      background: url(polina.jpg) no-repeat;
+      background-size: cover;
+      }
+      .navbar {
+         position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 10px 20px;
+        height: 70px;
+      }
+
+      .navbar .home-icon {
+        color: #fff;
+        font-size: 24px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+      }
+
+      .navbar .home-icon i {
+          margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="nav-bar">
+      <nav class="navbar navbar-expand-lg fixed-top" style="background-image: linear-gradient(90.4deg, rgba(188,120,236,1) -2.2%, rgba(29,133,163,1) 83.5%);">
+        <div class="navbar">
+            <a class="home-icon" href="index1.html"><i class="fas fa-home"></i>Home</a>
+            <!-- <h2 style="margin-left:50px;color:white;font-family:'Alatsi', sans-serif;font-style:bold;">Mindfulness</h2> -->
+        </div>
+    </nav>
+    </section>
+    <section id="intro" class="mx-auto" style="margin-top:5%;">
+      <div class="card mx-auto" style="width: 24rem;height:32rem;">
+        <img class="card-img-top" src="images/pic25.png" style="border-radius:25px;margin-left:auto;margin-right:auto;height:300px;width:250px;margin-top:10px;margin-bottom:auto;" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Eye of hurricane</h5>
+          <p class="card-text">Listen to The Eye of Hurricane exercise.</p>
+          <a href="activity6.html" target="_parent" class="text-center">
+            <button class="button-play" role="button">Play Now</button>
+          </a>
+        </div>
+      </div>
+      <br><br>
+      <hr>
+      <h1 class="text-center mt-5 mb-5"> Leaves on a Stream Exercise</h1><br><br>
+      <div class="header mx-auto col-sm-3 col-md-6 col-lg-4">
+        <button class="collapsible" style="font-size: 18px;height:75px">1. Get into position</button>
+        <div class="content" style="background-color:grey;">
+          <p style="padding-top:5%;padding-bottom:5%;">Sitting in a comfortable position, allow your shoulders to drop and relax, and plant your feet firmly on the ground. Or, if you are sitting cross-legged, feel the sense of contact between your feet and the seat and the floor beneath you.Now gently close your eyes, and for the next few breaths bring your full focus of attention to your breathing.
+          Notice the feeling of the air flowing in through the nostrils, down into the lungs, and down into the belly as you inhale and on the exhale, feel the release of any tension as you let the air out slowly.</p>
+          <img src="images/pic20.png" alt="mindfulness-meditate" style="height:50%;width:50%;margin-left:20%;margin-right:20%;">
+        </div>
+      </div><br>
+      <div class="header mx-auto col-sm-3 col-md-6 col-lg-4">
+        <button class="collapsible" style="font-size: 18px;height:75px">2. Imagine a Hurricane.</button>
+        <div class="content" style="background-color:grey;">
+          <p style="padding-top:5%;padding-bottom:5%;">Now let’s consider a metaphor. Within the strong, turbulent winds of a hurricane, the eye, the center of
+the hurricane, is quiet. There is no wind and no movement there. For a moment, picture this idea in your
+mind. Can you visualise the strong, turbulent winds of a hurricane, and the inner core that is peaceful
+and quiet?</p>
+          <img src="images/pic21.png" alt="mindfulness-meditate" style="height:50%;width:50%;margin-left:20%;margin-right:20%;">
+        </div>
+      </div><br>
+      <div class="header mx-auto col-sm-3 col-md-6 col-lg-4">
+        <button class="collapsible" style="font-size: 18px;height:75px">3. Become eye of the hurricane</button>
+        <div class="content" style="background-color:grey;">
+          <p style="padding-top:5%;padding-bottom:5%;">Let’s see if you can become like the centre of the hurricane. Your current circumstances, your thoughts, your feelings, and the sensations throughout your body, can be compared to the winds of a hurricane. Is it possible for you to let go of all of these things for a moment, so that you are no longer taking part in them... like the centre of the hurricane is not taking part in the turbulent surrounding winds.</p>
+          <img src="images/pic22.png" alt="mindfulness-meditate" style="height:50%;width:50%;margin-left:20%;margin-right:20%;">
+        </div>
+      </div><br>
+      <div class="header mx-auto col-sm-3 col-md-6 col-lg-4">
+        <button class="collapsible" style="font-size: 18px;height:75px">4. Continue the exercise</button>
+        <div class="content" style="background-color:grey;">
+          <p style="padding-top:5%;padding-bottom:5%;">To do this, start by focusing on your breath. Simply breathe in and breathe out. Focus inward.Just like the eye is deep within the hurricane, your eye is deep within you. Use your breath to connect to this part of you. Simply breathe in and breathe out.Stay connected to your breath. If anything stressful happens in this moment, such as negative thoughts,
+unpleasant feelings, annoying sounds, difficult life events, memories... try to look at them as if they are
+the turbulent wind of the hurricane; whirling around, continually changing, unpredictable in nature...</p>
+          <img src="images/pic23.png" alt="mindfulness-meditate" style="height:50%;width:50%;margin-left:20%;margin-right:20%;">
+        </div>
+      </div><br>
+      <div class="header mx-auto col-sm-3 col-md-6 col-lg-4">
+        <button class="collapsible" style="font-size: 18px;height:75px">5. stay connected to the eye.</button>
+        <div class="content" style="background-color:grey;">
+          <p style="padding-top:5%;padding-bottom:5%;">Stay connected to your breath. If anything stressful happens in this moment, such as negative thoughts,
+unpleasant feelings, annoying sounds, difficult life events, memories... try to look at them as if they are
+the turbulent wind of the hurricane; whirling around, continually changing, unpredictable in nature. Notice that you are not them. You are the silent centre of the hurricane, the part that is peaceful, despite
+what is happening around you.You are the silent centre of the hurricane, peaceful and at ease. You are not reacting, you are simply observing. Like the wind of the hurricane, these experiences are
+constantly moving and changing. You, on the other hand, are stable. You are not moving or being carried
+away by them.No matter how intense or bad the hurricane gets, the eye is always centered, calm and at ease. Even the
+most turbulent hurricane cannot hurt or harm the eye; the eye is safe. Whenever you feel you need to
+restore your inner peace, use your breath to connect to this silent part of yourself. Just breathe in and
+breathe out. It may help to visualise the hurricane, with yourself in the centre.</p>
+          <img src="images/pic23.png" alt="mindfulness-meditate" style="height:50%;width:50%;margin-left:20%;margin-right:20%;">
+        </div>
+      </div><br>
+      <div class="header mx-auto col-sm-3 col-md-6 col-lg-4">
+        <button class="collapsible" style="font-size: 18px;height:75px">5. Ground yourself</button>
+        <div class="content" style="background-color:grey;">
+          <p style="padding-top:5%;padding-bottom:5%;">It can be difficult to see the eye of the hurricane at times, and sometimes we forget the eye is there...
+however, it is always there. If we examine closely enough—even the strongest, darkest hurricane—
+sooner or later we’ll see the eye, centered and constant. Now, when you feel ready, slowly open your eyes.</p>
+          <img src="images/pic23.png" alt="mindfulness-meditate" style="height:50%;width:50%;margin-left:20%;margin-right:20%;">
+        </div>
+      </div><br>
+    </section>
+    <br>
+    <div class="text-center">
+      <button class="button-play col-lg-2 col-sm" id="gotohome" style="width:15%;"role="button" style="font-size: 20px;">Done</button>
+    </div>
+    <br><br>
+    <script>
+      document.getElementById('gotohome').addEventListener('click', function () {
+              window.location.href = 'index1.html';
+          });
+    </script>
+    <script>
+      const collapsibleBtns = document.querySelectorAll('.collapsible');
+      const contentDivs = document.querySelectorAll('.content');
+
+      collapsibleBtns.forEach((btn, index) => {
+        btn.addEventListener('click', () => {
+          contentDivs[index].style.maxHeight = contentDivs[index].style.maxHeight ? null : contentDivs[index].scrollHeight + 'px';
+          btn.classList.toggle('active');
+        });
+      });
+    </script>
+  </body>
+</html>

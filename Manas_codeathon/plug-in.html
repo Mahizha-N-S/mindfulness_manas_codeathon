@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Plug-into Mindfulness</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+    body {
+      font-family: 'Alatsi', sans-serif;
+      margin: 0;
+      height: 100vh;
+      background-image: linear-gradient(315deg, #f8f9d2 0%, #e8dbfc 74%);
+      }
+       .strt-btn:hover {
+        background: rgba(188,120,236,1);
+        color: white;
+        }
+        .selected-card {
+            background-color: linear-gradient( 90.4deg,  rgba(188,120,236,1) -2.2%, rgba(29,133,163,1) 83.5% );
+        }
+        .navbar-toggler-icon{
+          background-color: white;
+        }
+        .card-body:hover{
+          background-color: rgba(188,120,236,1);
+          /* border: 0 0 1px #e6ccb2; */
+        }
+        .navbar {
+           position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          padding: 10px 20px;
+          height: 70px;
+        }
+
+        .navbar .home-icon {
+          color: #fff;
+          font-size: 24px;
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+        }
+
+        .navbar .home-icon i {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="nav-bar">
+        <nav class="navbar navbar-expand-lg fixed-top" style="background-image: linear-gradient(90.4deg, rgba(188,120,236,1) -2.2%, rgba(29,133,163,1) 83.5%);">
+          <div class="navbar">
+              <a class="home-icon" href="index1.html"><i class="fas fa-home"></i>Home</a>
+              <!-- <h2 style="margin-left:50px;color:white;font-family:'Alatsi', sans-serif;font-style:bold;">Mindfulness</h2> -->
+          </div>
+      </nav>
+      </section>
+    <div style="margin-top: 70px;" class="card-group">
+        <div class="card mx-auto" style="width: 15rem; margin: 10px; padding: 10px; border: 1px solid #ccc; border-radius: 10px; background-image: radial-gradient(circle 588px at 31.7% 40.2%, rgba(225, 200, 239, 1) 21.4%, rgba(163, 225, 233, 1) 57.1%);">
+            <div class="card-body text-center col-sm">
+                <div>
+                    <img src="https://i.pinimg.com/originals/35/ce/9f/35ce9f85da291b4c1c504d8cbd37e8ee.gif" style="height:150px;width:150px;border-radius:120px;" alt="cat">              
+                </div>
+                <div style=" padding: 10px; border-radius: 5px; margin-bottom: 10px;">
+                    <h5 class="card-title">CAT</h5>
+                </div>
+                <div style="border-top: 1px solid #ccc; padding-top: 10px;">
+                    <p class="card-text">Independent and self-reliant individuals.</p>
+                <input type="radio" id="cat" name="pet" value="cat">
+               <label for="cat">Ok</label>
+                </div>
+            </div>
+        </div>
+        <div class="card mx-auto" style="width: 15rem; margin: 10px; padding: 10px; border: 1px solid #ccc; border-radius: 10px; background-image: radial-gradient(circle 588px at 31.7% 40.2%, rgba(225, 200, 239, 1) 21.4%, rgba(163, 225, 233, 1) 57.1%);">
+            <div class="card-body text-center col-sm">
+                <div>
+                    <img
+                    src="https://i.pinimg.com/originals/8f/84/cf/8f84cf67686f68d2a3ea06492c52ab42.gif"
+                    style="height:150px;width:150px;border-radius:120px;" alt="dog">
+                </div>
+                <div style=" padding: 10px; border-radius: 5px; margin-bottom: 10px;">
+                    <h5 class="card-title">DOG</h5>
+                </div>
+                <div style="border-top: 1px solid #ccc; padding-top: 10px;">
+                    <p class="card-text">Hardwork and loyalty.</p>
+                <input type="radio" id="dog" name="pet" value="dog">
+                <label for="dog">Ok</label>
+                </div>
+            </div>
+        </div>
+        <div class="card mx-auto" style="width: 15rem; margin: 10px; padding: 10px; border: 1px solid #ccc; border-radius: 10px; background-image: radial-gradient(circle 588px at 31.7% 40.2%, rgba(225, 200, 239, 1) 21.4%, rgba(163, 225, 233, 1) 57.1%);">
+            <div class="card-body text-center col-sm">
+                <div>
+                    <img
+                    src="https://i.pinimg.com/originals/89/8a/77/898a77178781d222bce1683df306c75e.gif"
+                    style="height:150px;width:150px;border-radius:120px;" alt="bunny">
+                </div>
+                <div style=" padding: 10px; border-radius: 5px; margin-bottom: 10px;">
+                    <h5 class="card-title">BUNNY</h5>
+                </div>
+                <div style="border-top: 1px solid #ccc; padding-top: 10px;">
+                    <p class="card-text">Active and social.</p>
+                <input type="radio" id="bunny" name="pet" value="bunny">
+                  <label for="bunny">Ok</label>
+                </div>
+            </div>
+        </div>
+        <div class="card mx-auto" style="width: 15rem; margin: 10px; padding: 10px; border: 1px solid #ccc; border-radius: 10px; background-image: radial-gradient(circle 588px at 31.7% 40.2%, rgba(225, 200, 239, 1) 21.4%, rgba(163, 225, 233, 1) 57.1%);">
+            <div class="card-body text-center col-sm">
+                <div>
+                    <img src="https://www.icegif.com/wp-content/uploads/fish-jar-icegif.gif" style="height: 150px; width: 150px; border-radius: 120px;" alt="fish">
+                </div>
+                <div style="padding: 10px; border-radius: 5px; margin-bottom: 10px;">
+                    <h5 class="card-title">FISH</h5>
+                </div>
+                <div style="border-top: 1px solid #ccc; padding-top: 10px;">
+                    <p class="card-text">Values tranquility and a low-maintenance lifestyle.</p>
+                    <input type="radio" id="fish" name="pet" value="fish">
+                    <label for="html">Ok</label>
+                </div>
+            </div>
+        </div>
+        
+    </div><br><br>
+    <div class="text-center col-sm">
+        <button type="button" class="btn btn-block btn-lg glow-button mt-0 mx-auto strt-btn col-sm-6" style="--box-shadow-color: black;
+    box-shadow: 0 0 30px var(--box-shadow-color);--box-shadow-color: rgba(163,225,233,1);width:15%;" onclick="confirmPet()">Lets go</button>
+    </div>
+    <script>
+       // Get all radio buttons by name attribute
+// Get all radio buttons by name attribute
+const radioButtons = document.querySelectorAll('input[name="pet"]');
+
+// Add a change event listener to each radio button
+radioButtons.forEach((radioButton) => {
+    radioButton.addEventListener('change', function() {
+        // Get the parent card element
+        const card = this.closest('.card');
+
+        // Loop through all radio buttons and set background color to white
+        radioButtons.forEach((radio) => {
+            const card = radio.closest('.card');
+            card.style.backgroundColor = 'background-image: radial-gradient( circle 588px at 31.7% 40.2%,  rgba(225,200,239,1) 21.4%, rgba(163,225,233,1) 57.1% );';
+        });
+
+        // Check if the radio button is checked
+        if (this.checked) {
+            // Change the background color of the card to lightblue
+            card.style.backgroundColor = 'background-image: radial-gradient( circle 588px at 31.7% 40.2%,  rgba(225,200,239,1) 21.4%, rgba(163,225,233,1) 57.1% );'; // You can change this to your desired color
+        }
+    });
+});
+
+        function confirmPet()
+        {
+
+            var checkRadio = document.querySelector(
+                'input[name="pet"]:checked');
+             var selectedPet=checkRadio.value;
+            if(checkRadio != null) {
+                alert("GREAT!! You have choosed "+selectedPet+" as your pet");
+                if(selectedPet=="dog"){
+                    window.location.href = "dog.html";
+                }
+                else if(selectedPet=="cat"){
+                    window.location.href="cat.html";
+                }
+                else if(selectedPet=="bunny"){
+                    window.location.href="bunny.html";
+                }
+                else if(selectedPet=="fish"){
+                    window.location.href="fish.html";
+                }
+            }
+            else {
+                alert("WARNING!!! You have not choosed your pet yet");
+            }
+
+        }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Games</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Pixelify Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: linear-gradient(to bottom, #FDF0F0, #DAFFFB);
+            background: -webkit-linear-gradient(top, #FDF0F0, #DAFFFB);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FDF0F0', endColorstr='#DAFFFB', GradientType=0);
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .button-container {
+            margin-top: auto;
+        }
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            text-align: center;
+            overflow: hidden;
+        }
+        .card-button {
+            background-color: rgb(240, 10, 152);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .card-button:hover {
+            background-color: #ff6bce;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .typing-effect {
+            overflow: hidden;
+            border-right: .15em solid rgb(240, 10, 152);
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .15em;
+            animation: typing 3.5s steps(30, end), blink-caret .5s step-end infinite;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0
+            }
+
+            to {
+                width: 100%
+            }
+        }
+
+        @keyframes blink-caret {
+            from, to {
+                border-color: transparent
+            }
+
+            50% {
+                border-color: rgb(240, 10, 152)
+            }
+        }
+
+        @media (max-width: 767px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+        .navbar {
+            font-family:Arial, Helvetica, sans-serif;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #08a9f4;
+        }
+
+        .navbar .home-icon {
+            color: #fff;
+            font-size: 24px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .home-icon i {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a class="home-icon" href="index1.html"><i class="fas fa-home"></i>Home</a>
+    </div>
+    <br><br><br>
+    <h1 class="typing-effect">Welcome to your mini-game-verse</h1>
+    <br><br><br>
+    <div class="container">
+        <div class="card">
+            <div class="card-content">
+                <h2>Memory Card Game</h2>
+                <img src="images/g1.png" alt="Memory Card Game" style="height:50%;width:50%;margin-left:20%;margin-right:20%;">
+                <h3>Instruction:</h3>
+                <ul>
+                    <li>Find the correct match before the time runs out.</li>
+                    <li>Enjoy matching the gems and beat your record!!</li>
+                </ul>
+                <button class="card-button" onclick="window.location.href='game_1.html'">Play Memory Card Game</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <h2>Tic Tac Toe Game</h2>
+                <img src="images/g2.png" alt="Tic Tac Toe Game" style="height:50%;width:50%;margin-left:20%;margin-right:20%;">
+                <br><br><br>
+                <h3>Instruction:</h3>
+                <ul>
+                    <li>Choose your symbol ( X / O )</li>
+                    <li>Beat the computer with your mind skills!!</li>
+                </ul>
+                <button class="card-button" onclick="window.location.href='game_2.html'">Play Tic Tac Toe Game</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <h2>Hangman Game</h2>
+                <img src="images/g3.png" alt="Hangman Game" style="height:50%;width:50%;margin-left:20%;margin-right:20%;">
+                <h3>Instruction:</h3>
+                <ul>
+                    <li>Guess the word in the Hangman world.</li>
+                    <li>Remember every wrong move will cost his life!!</li>
+                </ul>
+                <button class="card-button" onclick="window.location.href='game_3.html'">Play Hangman Game</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <h2>Word Scramble Game</h2>
+                <img src="images/g4.png" alt="Word Scramble Game" style="height:50%;width:50%;margin-left:20%;margin-right:20%;">
+                <br><br><br><br><br><br>
+                <h3>Instruction:</h3>
+                <ul>
+                    <li>Make the word out of the splash of letters.</li>
+                    <li>Lets learn and have fun with words!!</li>
+                </ul>
+                <button class="card-button" onclick="window.location.href='game_4.html'">Play Word Scramble Game</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

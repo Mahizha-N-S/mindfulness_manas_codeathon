@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content="HTML Template, site template, seo, marketing, creative, corporate, modern, multipurpose, one page, business, responsive, minimal, saas, startup">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Exercise 1 : Wheel of Awarness Exercise</title>
+    <style>
+    body {
+      font-family: 'Alatsi', sans-serif;
+      margin: 0;
+      /* background-image: linear-gradient(315deg, #f8f9d2 0%, #e8dbfc 74%); */
+      background-image:url("images/pic33.jpg");
+      }
+
+      .navbar-toggler-icon{
+        background-color: white;
+      }
+
+      .collapsible {
+        cursor: pointer;
+        padding: 10px;
+        background-color: #F4D1D7;
+        /* background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(234,249,249,0.67) 0.1%, rgba(239,249,251,0.63) 90.1% ); */
+        border: none;
+        border-radius: 15px;
+        text-align: left;
+        outline: none;
+        width: 100%;
+        transition: background-color 0.5s;
+      }
+
+      .content {
+        background-image: linear-gradient(147deg, #f9fcff 0%, #dee4ea 74%);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-out;
+      }
+
+      .content p {
+        margin: 10px;
+      }
+
+      .collapsible.active {
+        /* background-color: #ffcbf2; */
+        color: white;
+        font-size: 20px;
+        transition: smooth;
+        background-image:linear-gradient( 90.4deg,  rgba(188,120,236,1) -2.2%, rgba(29,133,163,1) 83.5% );
+      }
+      .card{
+        background-color: #f0efeb;
+        border-radius: 50px;
+      }
+      /* .header{
+        border-radius: 25px;
+      } */
+      .button-play {
+        appearance: none;
+        background-color: #000000;
+        border: 2px solid #1A1A1A;
+        border-radius: 15px;
+        box-sizing: border-box;
+        color: #FFFFFF;
+        cursor: pointer;
+        display: inline-block;
+        font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+        font-size: 16px;
+        font-weight: 600;
+        line-height: normal;
+        margin: 0;
+        min-height: 60px;
+        min-width: 0;
+        outline: none;
+        padding: 16px 24px;
+        text-align: center;
+        text-decoration: none;
+        transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        width: 100%;
+        will-change: transform;
+      }
+
+      .button-play:disabled {
+        pointer-events: none;
+      }
+
+      .button-play:hover {
+        box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+        transform: translateY(-2px);
+      }
+
+      .button-play:active {
+        box-shadow: none;
+        transform: translateY(0);
+      }
+      .container {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      }
+      .card {
+      transform-style: preserve-3d;
+      box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+      }
+
+
+.card-gls {
+  /* width: 400px; */
+  min-height: 250px;
+  background: rgba( 255, 255, 255, 0.15 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 18px );
+  -webkit-backdrop-filter: blur( 18px );
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  border-radius: 1rem;
+  padding: 1.5rem;
+  z-index: 10;
+  color: whitesmoke;
+}
+
+.btn {
+  background: none;
+  border: none;
+  text-align: center;
+  font-size: 1rem;
+  color: whitesmoke;
+  background-color: #ffcbf2;
+  padding: 0.8rem 1.8rem;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.blob {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(
+    180deg,
+    rgba(47, 184, 255,0.42) 31.77%,
+    #5c9df1 100%
+  );
+  mix-blend-mode: color-dodge;
+  -webkit-animation: move 25s infinite alternate;
+          animation: move 25s infinite alternate;
+  transition: 1s cubic-bezier(0.07, 0.8, 0.16, 1);
+}
+
+.blob:hover {
+  width: 520px;
+  height: 520px;
+  -webkit-filter: blur(30px);
+          filter: blur(30px);
+  box-shadow:
+    inset 0 0 0 5px rgba(255,255,255, 0.6),
+    inset 100px 100px 0 0px #fa709a,
+    inset 200px 200px 0 0px #784ba8,
+    inset 300px 300px 0 0px #2b86c5;
+}
+
+@-webkit-keyframes move {
+  from {
+    transform: translate(-100px, -50px) rotate(-90deg);
+    border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
+  }
+
+  to {
+    transform: translate(500px, 100px) rotate(-10deg);
+    border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
+  }
+}
+
+@keyframes move {
+  from {
+    transform: translate(-100px, -50px) rotate(-90deg);
+    border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
+  }
+
+  to {
+    transform: translate(500px, 100px) rotate(-10deg);
+    border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
+  }
+}
+.navbar {
+   position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 20px;
+  height: 70px;
+}
+
+.navbar .home-icon {
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.navbar .home-icon i {
+    margin-right: 10px;
+}
+    </style>
+  </head>
+  <body>
+    <section id="nav-bar">
+      <nav class="navbar navbar-expand-lg fixed-top" style="background-image: linear-gradient(90.4deg, rgba(188,120,236,1) -2.2%, rgba(29,133,163,1) 83.5%);">
+        <div class="navbar">
+            <a class="home-icon" href="index1.html"><i class="fas fa-home"></i>Home</a>
+            <!-- <h2 style="margin-left:50px;color:white;font-family:'Alatsi', sans-serif;font-style:bold;">Mindfulness</h2> -->
+        </div>
+    </nav>
+    </section>
+
+    <section id="intro" class="mx-auto" style="margin-top:5%;">
+      <div class="card mx-auto" style="width: 24rem;height:32rem;">
+        <img class="card-img-top" src="images/pic18.png" style="margin-left:auto;margin-right:auto;height:300px;width:300px;margin-top:10px;margin-bottom:auto;" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">The Wheel of Awareness</h5>
+          <p class="card-text">Listen to The Wheel of Awareness exercise.</p>
+          <a href="activity2.html" target="_parent" class="text-center">
+            <button class="button-play" style="font-size: 20px"role="button">Play Now</button>
+          </a>
+        </div>
+      </div>
+      <br><br><hr>
+      <h1 class="text-center mt-5 mb-5"> The Wheel of Awareness Exercise</h1>
+      <div class="header mx-auto col-sm-3 col-md-6 col-lg-4">
+        <button class="collapsible" style="font-size: 18px;height:75px">1. Get into position</button>
+        <div class="content" style="background-color:grey;">
+          <p style="padding-top:5%;padding-bottom:5%;">To begin, find a comfortable meditation position. Either sitting on a cushion on the floor, or in a chair. Allow your
+          spine to be straight and long, and let your shoulders drop, relaxed. Rest your hands in your lap, and gently close your eyes.<br/>Become aware of the rhythm of your breathing. There’s no need to change your breathing in any way, simply notice
+          it exactly as it is.</p>
+          <img src="images/pic9.png" alt="mindfulness-meditate" style="height:50%;width:50%;margin-left:20%;margin-right:20%;">
+        </div>
+      </div><br>
+
+      <div class="header mx-auto col-sm-3 col-md-6 col-lg-4">
+        <button class="collapsible" style="font-size: 18px;height:75px">2.Imagine a Wheel</button>
+        <div class="content">
+          <p style="padding-top:5%;padding-bottom:5%;">Now, bring to mind the image of a wheel. This wheel has a center, known as the “hub”, and four sections, or quadrants, surrounding this hub. There is a rim that encompasses everything - the four quadrants and the hub. For each part of this practice, you will zoom in on one portion of the wheel, and become aware of its contents with my guidance.</p>
+          <img src="images/pic11.png" alt="mindfulness-meditate" style="height:50%;width:50%;margin-left:20%;margin-right:20%;">
+        </div>
+      </div><br>
+
+      <div class="header mx-auto col-sm-3 col-md-6 col-lg-4">
+        <button class="collapsible" style="font-size: 18px;height:75px">3.First quadrant: connect to the five senses</button>
+        <div class="content">
+          <p style="padding-top:5%;padding-bottom:5%;">Turn your attention to the top, left quadrant, which houses your five senses. Zoom in on this area of your wheel by engaging your sense of hearing… what can you hear? And now your sense of touch… what can you feel? And now your sense of smell, and taste… what can you notice? Now gently open your eyes for a moment… what can you see?</p>
+          <img src="images/pic12.png" alt="mindfulness-meditate" style="height:50%;width:50%;margin-left:20%;margin-right:20%;">
+        </div>
+      </div><br>
+
+      <div class="header mx-auto col-sm-3 col-md-6 col-lg-4">
+        <button class="collapsible" style="font-size: 18px;height:75px">4. Second quadrant: connect to bodily sensations</button>
+        <div class="content">
+          <p style="padding-top:8%;padding-bottom:8%;">Take a deep slow breath here.Turn your attention to the top, right quadrant, which houses your “sixth sense”, which is the inner sensations of your own body. Take a few moments to scan through your body from head to toe, becoming aware of any and all physical sensations throughout. Tingling, heat, tension, numbness. Take your time to move through each body group. Just noticing, being curious, just observing</p>
+          <img src="images/pic14.png" alt="confused" style="height:50%;width:50%;margin-left:20%;margin-right:20%;">
+        </div>
+      </div><br>
+
+      <div class="header mx-auto col-sm-3 col-md-6 col-lg-4">
+        <button class="collapsible" style="font-size: 18px;height:75px">5. Third quadrant: connect to mental activities</button>
+        <div class="content">
+          <p style="padding-top:5%;padding-bottom:5%;">Turn your attention to the bottom, left quadrant, which houses the activities of your mind itself, including your emotions, thoughts, memories, hopes, beliefs, dreams, attitudes, and intentions. First, simply become aware of everything that is entering your mind at this moment. Welcoming this mental activity into your awareness. What thoughts and feelings are showing up right now?. Next, begin to examine how these internal experiences arise and pass… Do they come up suddenly or gradually? Do they stay constant, or fade in and out? Are there gaps between the different mental activities, or do these exist as one long stream of consciousness?</p>
+          <img src="images/pic13.png" alt="mindfulness-meditate" style="height:50%;width:50%;margin-left:20%;margin-right:20%;">
+        </div>
+      </div><br>
+
+      <div class="header mx-auto col-sm-3 col-md-6 col-lg-4">
+        <button class="collapsible" style="font-size: 18px;height:75px">6. Hub: awareness of awareness</button>
+        <div class="content">
+          <p style="padding-top:5%;padding-bottom:5%;">Good, let’s take another nice deep breath here.Turn your attention to the center of the wheel, the hub, which is where your awareness stems from. The hub is the ‘you’ that has noticed everything so far in this practice - the part of you that is observing, listening, looking, focusing, sensing. Take some time here, as cultivating this “awareness of awareness” takes practice</p>
+          <img src="images/pic16.png" alt="mindfulness-meditate" style="height:50%;width:50%;margin-left:20%;margin-right:20%;">
+        </div>
+      </div><br>
+
+      <div class="header mx-auto col-sm-3 col-md-6 col-lg-4">
+        <button class="collapsible" style="font-size: 18px;height:75px">7.Fourth quadrant: connect to others</button>
+        <div class="content">
+          <p style="padding-top:5%;padding-bottom:5%;">Good, let’s take another deep, slow breath here. And then turn your attention to the bottom, right quadrant of your wheel, which houses your sense of connection to the outside world. First, notice the sense of connection to the people physically closest to you right now [15-second pause]. Then, expand this sense of connection to people further away [15-second pause]. And then tap into your sense of connection to your loved ones, wherever they may be right now [15-second pause]. Then, widen your sense of connection step-by-step to include those who live in your neighborhood, city, country, continent, in the whole world, and finally to all living beings on earth.</p>
+          <img src="images/pic17.png" alt="mindfulness-meditate" style="height:50%;width:50%;margin-left:20%;margin-right:20%;">
+        </div>
+      </div><br>
+
+      <div class="header mx-auto col-sm-3 col-md-6 col-lg-4">
+        <button class="collapsible" style="font-size: 18px;height:75px">8. Ground yourself</button>
+        <div class="content">
+          <p style="padding-top:5%;padding-bottom:5%;">As the meditation comes to an end, simply bring your attention back to your breath, as you did at the beginning of the practice. You might like to take a few deep, slow breaths here, to ground yourself back into this moment. Then, when you are ready, gently open the eyes.</p>
+          <img src="images/pic15.png" alt="mindfulness-meditate" style="height:50%;width:50%;margin-left:20%;margin-right:20%;">
+        </div>
+      </div><br>
+
+    </section>
+    <br>
+    <div class="text-center">
+      <button class="button-play col-lg-2 col-sm" id="gotoActivity2" style="font-size: 20px;width:15%;"role="button">Next</button>
+    </div>
+
+  <br><br><br>
+  <script>
+    document.getElementById('gotoActivity2').addEventListener('click', function () {
+            window.location.href = 'activity3.html';
+        });
+  </script>
+    <script>
+      const collapsibleBtns = document.querySelectorAll('.collapsible');
+      const contentDivs = document.querySelectorAll('.content');
+
+      collapsibleBtns.forEach((btn, index) => {
+        btn.addEventListener('click', () => {
+          contentDivs[index].style.maxHeight = contentDivs[index].style.maxHeight ? null : contentDivs[index].scrollHeight + 'px';
+          btn.classList.toggle('active');
+        });
+      });
+    </script>
+  </body>
+</html>

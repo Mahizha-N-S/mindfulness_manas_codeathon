@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Link Bootstrap --> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Quiz</title>
+    <style>
+      body {
+        font-family: 'Alatsi', sans-serif;
+        margin: 0;
+        background-image: linear-gradient(315deg, #f8f9d2 0%, #e8dbfc 74%);
+        }
+        #container {
+            max-width: 80%;
+            margin-left: 60px;
+            margin-right: 60px;
+            margin-bottom:60px;
+            background-color: #ddbea9;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px 0px;
+            position: center;
+        }
+
+        #start {
+            font-size: 1.5em;
+            font-weight: bolder;
+            word-break: break-all;
+            width: 100px;
+            height: 40px;
+            border: 2px solid black;
+            text-align: center;
+            cursor: pointer;
+            position: absolute;
+            margin-left: 25%;
+            transform: translateX(-50%);
+            color: black;
+        }
+
+        #start:hover {
+            border: 3px solid rgba(188,120,236,1);
+            color: rgba(188,120,236,1);
+        }
+        #quiz{
+          width: 75%;
+          height: auto;
+          border-radius: 50px;
+          margin-left: 15%;
+          margin-right:15%;
+          box-shadow: 0 0 3px black;
+        }
+
+        #qImg {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            margin: 0 auto;
+            display: block;
+            border-top-left-radius: 5px;
+        }
+
+        #qImg img {
+            width: 100%;
+            height: auto;
+            border-top-left-radius: 5px;
+        }
+
+        #question {
+            max-width: 100%;
+            padding: 15px;
+        }
+
+        #question p {
+            margin: 0;
+            font-size: 1.25em;
+        }
+
+        #choices {
+            max-width: 100%;
+            padding: 10px;
+        }
+
+        .choice {
+            display: block;
+            width: 100%;
+            text-align: center;
+            border: 1px solid grey;
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        .choice:hover {
+            border: 2px solid #000;
+            font-weight: bold;
+        }
+
+        #scoreContainer {
+            max-width: 100%;
+            margin: 20px;
+            background-color: white;
+            opacity: 0.8;
+            border-radius: 5px;
+            box-shadow: 0px 5px 15px 0px;
+            position: relative;
+            display: none;
+        }
+
+        #scoreContainer img {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        #scoreContainer p {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 220px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.5em;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        @media screen and (max-width: 600px) {
+            #choices .choice {
+                width: 100%;
+            }
+            #qImg {
+                max-width: 150px;
+            }
+
+            #question p {
+                font-size: 1em;
+            }
+        }
+        .btn-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .btn {
+            background-color:linear-gradient( 90.4deg,  rgba(188,120,236,1) -2.2%, rgba(29,133,163,1) 83.5% );
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover{
+          box-shadow: 0 0 5px black;
+        }
+        .navbar-toggler-icon{
+          background-color: white;
+        }
+        .navbar {
+           position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          padding: 10px 20px;
+          height: 70px;
+        }
+
+        .navbar .home-icon {
+          color: #fff;
+          font-size: 24px;
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+        }
+
+        .navbar .home-icon i {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+  <section id="nav-bar">
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-image: linear-gradient(90.4deg, rgba(188,120,236,1) -2.2%, rgba(29,133,163,1) 83.5%);">
+      <div class="navbar">
+          <a class="home-icon" href="index1.html"><i class="fas fa-home"></i>Home</a>
+          <!-- <h2 style="margin-left:50px;color:white;font-family:'Alatsi', sans-serif;font-style:bold;">Mindfulness</h2> -->
+      </div>
+  </nav>
+  </section>
+  <div class="card mx-auto" style="width: 24rem;height:32rem;border-radius: 50px;margin-top:8%;background-color: #f0efeb;border:none;">
+    <img class="card-img-top" src="images/pic24.png" style="margin-left:auto;margin-right:auto;height:300px;width:300px;margin-top:10px;margin-bottom:auto;" alt="Card image cap">
+    <div class="card-body">
+      <p class="card-text" style="max-width: 80%;margin-left: 60px;margin-right: 60px;">Scroll down to start your quiz.</p>
+      <div id="container">
+          <div id="start" onclick="scrollToQuizSection()">Start</div>
+      </div>
+    </div>
+  </div><br><br>
+          <div id="quiz" style="display: none">
+            <br>
+              <div id="topic"class="text-center"></div>
+              <div id="question"></div>
+              <div id="qImg"></div>
+              <div id="choices">
+                  <div class="choice" id="A" onclick="checkAnswer('A')"></div>
+                  <div class="choice" id="B" onclick="checkAnswer('B')"></div>
+                  <div class="choice" id="C" onclick="checkAnswer('C')"></div>
+                  <div class="choice" id="D" onclick="checkAnswer('D')"></div>
+              </div><br>
+              <div id="btn-container" class="ml-3 mb-2">
+                  <button id="prevButton" style="background-image: radial-gradient( circle 588px at 31.7% 40.2%,  rgba(188,120,236,1) 21.4%, rgba(163,225,233,1) 57.1% );" class="btn" onclick="prevQuestion()">Previous</button>
+                  <button id="nextButton" style="background-image: radial-gradient( circle 588px at 31.7% 40.2%,  rgba(188,120,236,1) 21.4%, rgba(163,225,233,1) 57.1% );" class="btn" onclick="nextQuestion()">Next</button>
+              </div><br>
+          </div>
+          <div id="scoreContainer" style="display: none"></div>
+      <script>
+        const start = document.getElementById("start");
+        const quiz = document.getElementById("quiz");
+        const topic = document.getElementById("topic");
+        const question = document.getElementById("question");
+        const qImg = document.getElementById("qImg");
+        const choiceA = document.getElementById("A");
+        const choiceB = document.getElementById("B");
+        const choiceC = document.getElementById("C");
+        const choiceD = document.getElementById("D");
+        const scoreDiv = document.getElementById("scoreContainer");
+
+        const prevButton = document.getElementById("prevButton");
+        const nextButton = document.getElementById("nextButton");
+
+        // Handle the "Previous" button click
+        function prevQuestion() {
+            if (runningQuestion > 0) {
+                runningQuestion--;
+                renderQuestion();
+            }
+        }
+
+        // Handle the "Next" button click
+        function nextQuestion() {
+            if (runningQuestion < lastQuestion) {
+                runningQuestion++;
+                renderQuestion();
+            } else {
+                // end the quiz and show the score
+                scoreRender();
+            }
+        }
+        // create our questions
+        let questions = [
+            {
+                topic:"BASIC AWARENESS",
+                question: "Do you often notice your thoughts and emotions during the day?",
+                imgSrc: "images/q1.png",
+                choiceA: "A)Rarely",
+                choiceB: "B)Occasionally",
+                choiceC: "C)Frequently",
+                choiceD: "D)Always",
+                correct: "C"
+            },
+            {
+                topic:"BASIC AWARENESS",
+                question: "Are you more aware of bodily sensations and tension in your body?",
+                imgSrc: "images/q2.png",
+                choiceA: "A)Not aware",
+                choiceB: "B)Slightly aware",
+                choiceC: "C)Moderately aware",
+                choiceD: "D)Highly aware",
+                correct: "D"
+            },
+            {
+                topic:"BASIC AWARENESS",
+                question: "Can you identify your emotional reactions more easily now?",
+                imgSrc: "images/q3.png",
+                choiceA: "A)No improvement",
+                choiceB: "B)Slight improvement",
+                choiceC: "C)Moderate improvement",
+                choiceD: "D)Significant improvement",
+                correct: "D"
+            },
+            {
+                topic:"DAILY LIFE INTEGRATION",
+                question: "Do you find it easier to appreciate small, everyday moments of joy?",
+                imgSrc: "images/q4.png",
+                choiceA: "A)Not easier",
+                choiceB: "B)Slightly easier",
+                choiceC: "C)Moderately easier",
+                choiceD: "D)Much easier",
+                correct: "D"
+            },
+            {
+                topic:"DAILY LIFE INTEGRATION",
+                question: "Are you more patient and less reactive in stressful situations?",
+                imgSrc: "images/q5.png",
+                choiceA: "A)No change",
+                choiceB: "B)Slightly more patient",
+                choiceC: "C)Moderately more patient",
+                choiceD: "D)Much more patient",
+                correct: "D"
+            },
+            {
+                topic:"DAILY LIFE INTEGRATION",
+                question: "Have you started pausing before responding to difficult situations or conversations?",
+                imgSrc: "images/q6.png",
+                choiceA: "A)No change",
+                choiceB: "B)Occasionally",
+                choiceC: "C)Most of the time",
+                choiceD: "D)Always",
+                correct: "D"
+            },
+            {
+                topic:"DAILY LIFE INTEGRATION",
+                question: "Are you less inclined to engage in distractions or mindless activities?",
+                imgSrc: "images/q7.png",
+                choiceA: "A)No change",
+                choiceB: "B)Slightly less inclined",
+                choiceC: "C)Moderately less inclined",
+                choiceD: "D)Much less inclined",
+                correct: "D"
+            },
+            {
+                topic:"EMOTIONAL REGULATION",
+                question: "Are you quicker to recognize and manage emotional triggers?",
+                imgSrc: "images/q8.png",
+                choiceA: "A)No improvement",
+                choiceB: "B)Slight improvement",
+                choiceC: "C)Moderate improvement",
+                choiceD: "D)Significant improvement",
+                correct: "D"
+            },
+            {
+                topic:"EMOTIONAL REGULATION",
+                question: "Do you respond to difficult emotions with self-compassion?",
+                imgSrc: "images/q9.png",
+                choiceA: "A)Rarely",
+                choiceB: "B)Occasionally",
+                choiceC: "C)Frequently",
+                choiceD: "D)Always",
+                correct: "D"
+            },
+            {
+                topic:"EMOTIONAL REGULATION",
+                question: "Do you experience moments of inner peace and contentment?",
+                imgSrc: "images/q10.png",
+                choiceA: "A)Rarely",
+                choiceB: "B)Occasionally",
+                choiceC: "C)Frequently",
+                choiceD: "D)Always",
+                correct: "D"
+            },
+            {
+                topic:"EMOTIONAL REGULATION",
+                question: "Has your stress and anxiety levels decreased?",
+                imgSrc: "images/q11.png",
+                choiceA: "A)No improvement",
+                choiceB: "B)Slight improvement",
+                choiceC: "C)Moderate improvement",
+                choiceD: "D)Significant improvement",
+                correct: "D"
+            },
+            {
+                topic:"MINDFUL EATING AND SELF-CARE",
+                question: "Are you mindful of what you eat and how it affects your well-being?",
+                imgSrc: "images/q12.png",
+                choiceA: "A)Not mindful",
+                choiceB: "B)Slightly mindful",
+                choiceC: "C)Moderately mindful",
+                choiceD: "D)Highly mindful",
+                correct: "D"
+            },
+            {
+                topic:"MINDFUL EATING AND SELF-CARE",
+                question: "Do you prioritize self-care and relaxation?",
+                imgSrc: "images/q13.png",
+                choiceA: "A)No improvement",
+                choiceB: "B)Slight improvement",
+                choiceC: "C)Moderate improvement",
+                choiceD: "D)Significant improvement",
+                correct: "D"
+            },
+            {
+                topic:"MINDFUL EATING AND SELF-CARE",
+                question: "Are you more aware of your body's needs for rest and nourishment?",
+                imgSrc: "images/q14.png",
+                choiceA: "A)No improvement",
+                choiceB: "B)Slight improvement",
+                choiceC: "C)Moderate improvement",
+                choiceD: "D)Significant improvement",
+                correct: "D"
+            },
+            {
+                topic:"PRESENT-MOMENT FOCUS",
+                question: "Are you better at staying engaged in your current task or activity?",
+                imgSrc: "images/q15.png",
+                choiceA: "A)No improvement",
+                choiceB: "B)Slight improvement",
+                choiceC: "C)Moderate improvement",
+                choiceD: "D)Significant improvement",
+                correct: "D"
+            },
+            {
+                topic:"PRESENT-MOMENT FOCUS",
+                question: "Do you notice and appreciate the beauty in everyday experiences?",
+                imgSrc: "images/q16.png",
+                choiceA: "A)Always",
+                choiceB: "B)Occasionally",
+                choiceC: "C)Frequently",
+                choiceD: "D)Rarely",
+                correct: "A"
+            },
+            {
+                topic:"PRESENT-MOMENT FOCUS",
+                question: "Do you approach each moment with curiosity and an open mind?",
+                imgSrc: "images/q17.png",
+                choiceA: "A)Rarely",
+                choiceB: "B)Always",
+                choiceC: "C)Frequently",
+                choiceD: "D)Occasionally",
+                correct: "B"
+            },
+            {
+                topic:"PRESENT-MOMENT FOCUS",
+                question: "Do you practice mindful breathing exercises regularly?",
+                imgSrc: "images/q18.png",
+                choiceA: "A)Frequently",
+                choiceB: "B)Rarely",
+                choiceC: "C)Occasionally",
+                choiceD: "D)No",
+                correct: "A"
+            },
+            {
+                topic:"GRATITUDE AND POSITIVITY",
+                question: "Do you reflect on positive aspects of your day or experiences?",
+                imgSrc: "images/q19.png",
+                choiceA: "A)Rarely",
+                choiceB: "B)Daily",
+                choiceC: "C)Occasionally",
+                choiceD: "D)Frequently",
+                correct: "B"
+            },
+            {
+                topic:"GRATITUDE AND POSITIVITY",
+                question: "Do you express gratitude and kindness to others more often?",
+                imgSrc: "images/q20.png",
+                choiceA: "A)Moderate increase",
+                choiceB: "B)Significant increase",
+                choiceC: "C)Slight increase",
+                choiceD: "D)No increase",
+                correct: "B"
+            }
+
+        ];
+
+        // create some variables
+        const lastQuestion = questions.length - 1;
+        let runningQuestion = 0;
+        let score = 0;
+
+        // render a question
+        function renderQuestion() {
+            let q = questions[runningQuestion];
+            topic.innerHTML="<h1>"+q.topic+"<h1>";
+            question.innerHTML = "<p>" + q.question + "</p>";
+            qImg.innerHTML = "<img src=" + q.imgSrc + ">";
+            choiceA.innerHTML = q.choiceA;
+            choiceB.innerHTML = q.choiceB;
+            choiceC.innerHTML = q.choiceC;
+            choiceD.innerHTML = q.choiceD;
+        }
+
+        start.addEventListener("click", startQuiz);
+
+        // start quiz
+        function startQuiz() {
+            start.style.display = "none";
+            renderQuestion();
+            quiz.style.display = "block";
+        }
+
+        // checkAnwer
+        function checkAnswer(answer) {
+            if (answer == questions[runningQuestion].correct) {
+                // answer is correct
+                score++;
+            }
+            if (runningQuestion < lastQuestion) {
+                runningQuestion++;
+                renderQuestion();
+            } else {
+                // end the quiz and show the score
+                scoreRender();
+            }
+        }
+
+        // score render
+        function scoreRender() {
+            quiz.style.display = "none";
+            prevButton.style.display = "none";
+            nextButton.style.display = "none";
+            scoreDiv.style.display = "block";
+
+            // calculate the amount of question percent answered by the user
+            const scorePerCent = Math.round(100 * score / questions.length);
+
+            // choose the image based on the scorePerCent
+            let img =
+                scorePerCent >= 80
+                    ? "images/q21.png"
+                    : scorePerCent >= 60
+                        ? "images/q22.png"
+                        : scorePerCent >= 40
+                            ? "images/q23.png"
+                            : scorePerCent >= 20
+                                ? "images/q24.png"
+                                : "images/q25.png";
+
+            //scoreDiv.innerHTML = "<img src=" + img + ">";
+            //scoreDiv.innerHTML += "<p>" + scorePerCent + "%</p>";
+            // Create and display the score board on top of the quiz board
+            const scoreBoard = document.createElement("div");
+            scoreBoard.id = "scoreBoard";
+            scoreBoard.style.position = "absolute";
+            scoreBoard.style.top = "0";
+            scoreBoard.style.left = "0";
+            scoreBoard.style.width = "100%";
+            scoreBoard.style.height = "100%";
+            scoreBoard.style.backgroundColor = "rgba(255, 255, 255, 0.8)";
+            scoreBoard.style.display = "flex";
+            scoreBoard.style.flexDirection = "column";
+            scoreBoard.style.alignItems = "center";
+            scoreBoard.style.justifyContent = "center";
+
+            scoreBoard.innerHTML = `
+                <img src="${img}" alt="Score" style="width: 150px; height: 150px;">
+                <h2>YOUR SCORE BOARD<h2>
+                <p>${scorePerCent}%</p>
+
+            `;
+
+            document.body.appendChild(scoreBoard);
+        }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

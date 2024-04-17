@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content="HTML Template, site template, seo, marketing, creative, corporate, modern, multipurpose, one page, business, responsive, minimal, saas, startup">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> 
+    <!-- Link Bootstrap --> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Mindfulness Activites</title>
+  </head>
+  <style>
+    body {
+      font-family: 'Alatsi', sans-serif;
+      margin: 0;
+      height: 100vh;
+      background-image: linear-gradient(315deg, #f8f9d2 0%, #e8dbfc 74%);
+      }
+    .button-strt {
+      align-items: center;
+      background-color: rgba(188,120,236,1);
+      border: 2px solid #111;
+      border-radius: 8px;
+      box-sizing: border-box;
+      color: #111;
+      cursor: pointer;
+      display: flex;
+      font-family: Inter,sans-serif;
+      font-size: 16px;
+      height: 48px;
+      justify-content: center;
+      line-height: 24px;
+      max-width: 100%;
+      padding: 0 25px;
+      position: relative;
+      text-align: center;
+      text-decoration: none;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+    }
+
+    .button-strt:after {
+      background-color: #111;
+      border-radius: 8px;
+      content: "";
+      display: block;
+      height: 48px;
+      left: 0;
+      width: 100%;
+      position: absolute;
+      top: -2px;
+      transform: translate(8px, 8px);
+      transition: transform .2s ease-out;
+      z-index: -1;
+    }
+
+    .button-strt:hover:after {
+      transform: translate(0, 0);
+    }
+
+    .button-strt:active {
+      background-color: rgba(188,120,236,1);
+      outline: 0;
+    }
+
+    .button-strt:hover {
+      outline: 0;
+    }
+
+    @media (min-width: 768px) {
+      .button-strt {
+        padding: 0 40px;
+      }
+    }
+    .navbar-toggler-icon{
+      background-color: white;
+    }
+    .navbar {
+       position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 10px 20px;
+      height: 70px;
+    }
+
+    .navbar .home-icon {
+      color: #fff;
+      font-size: 24px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar .home-icon i {
+        margin-right: 10px;
+    }
+  </style>
+
+  <body>
+    <section id="nav-bar">
+      <nav class="navbar navbar-expand-lg fixed-top" style="background-image: linear-gradient(90.4deg, rgba(188,120,236,1) -2.2%, rgba(29,133,163,1) 83.5%);">
+        <div class="navbar">
+            <a class="home-icon" href="index1.html"><i class="fas fa-home"></i>Home</a>
+            <!-- <h2 style="margin-left:50px;color:white;font-family:'Alatsi', sans-serif;font-style:bold;">Mindfulness</h2> -->
+        </div>
+    </nav>
+    </section>
+    <section id="intro" class="mx-auto" style="margin-top:5%;">
+      <div class="text-center">
+        <img src="images/pic10.png" alt="activity">
+        <h3 class="mt-5">Let's start some interesting exercise...</h3>
+        <button class="button-strt mx-auto" role="button" id="gotoActivity">Let's Start</button>
+      </div>
+    </section>
+
+
+  <script>
+    document.getElementById('gotoActivity').addEventListener('click', function () {
+            window.location.href = 'activity1.html';
+        });
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script> 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
